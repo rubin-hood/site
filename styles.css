@@ -378,7 +378,7 @@ footer p {
 .post {
     display: flex; /* Macht den Beitrag zu einem flexiblen Container für Inhalt */
     gap: 10px; /* Abstand zwischen den Elementen im Beitrag */
-    border: 1px solid #c2c2c2; /* Gibt dem Beitrag einen Rahmen */
+    /*border: 1px solid #c2c2c2; /* Gibt dem Beitrag einen Rahmen */
     border-radius: 8px; /* Macht die Ecken des Rahmens abgerundet */
     margin: 10px; /* Abstand zwischen den Beiträgen */
     padding: 10px; /* Innenabstand innerhalb des Beitrags */
@@ -386,13 +386,14 @@ footer p {
     height: 340px; /* Feste Höhe des Beitrags */
     max-width: 340px; /* Maximale Breite */
     opacity: 0; /* Beitrag ist anfangs unsichtbar */
-    transition: transform 2s ease-out, opacity 1s ease-out; /* Definiert die Übergangsanimationen für Sichtbarkeit und Bewegung */
+    transition: transform 2s ease-out, opacity 2s ease-out; /* Definiert die Übergangsanimationen für Sichtbarkeit und Bewegung */
     background-color: #F6F5F1; /* Hintergrundfarbe des Beitrags */
     transform: translateY(50%); /* Startposition des Beitrags ist unterhalb des sichtbaren Bereichs */
     align-items: center; /* NEU: Zentriert das Bild und den Text horizontal */
     flex-direction: column; /* NEU: Anordnung der Kinder (Bild und Text) vertikal */
     justify-content: center; /* Zentriert den Inhalt vertikal */
 }
+
 
 .post.visible {
     opacity: 1; /* Beitrag wird sichtbar */
