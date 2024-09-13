@@ -459,3 +459,8 @@ a {
     color: inherit; /* Erbt die Textfarbe des Beitrags */
     text-decoration: none; /* Entfernt die Unterstreichung des Links */
 }
+
+
+.gross-text {
+    font-size: 48pt; /* Beispiel für eine größere Schriftgröße */
+}
