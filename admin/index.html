@@ -11,21 +11,5 @@
 
   <!-- Lädt Netlify CMS -->
   <script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
-
-  <!-- Container für den Markdown-Inhalt -->
-  <div id="content"></div>
-
-  <!-- Lädt die Markdown-Bibliothek -->
-  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-
-  <script>
-    // Lädt und konvertiert den Markdown-Inhalt
-    fetch('/posts/stromausfaelle-und-erste-evakuierungen.md')
-      .then(response => response.text())
-      .then(markdown => {
-        const html = marked(markdown);
-        document.getElementById('content').innerHTML = html;
-      });
-  </script>
 </body>
 </html>

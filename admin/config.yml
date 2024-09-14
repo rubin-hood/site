@@ -5,6 +5,9 @@ backend:
 media_folder: "images/uploads" # Pfad, in dem hochgeladene Medien wie Bilder gespeichert werden
 public_folder: "/images/uploads" # Öffentlich zugänglicher Pfad für Bilder
 
+editor:
+  preview: true
+
 collections:
   - name: "blog"
     label: "Blog"
