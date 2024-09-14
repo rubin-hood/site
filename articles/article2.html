@@ -43,7 +43,7 @@
     <div class="mobile-menu"> <!-- Mobiles Menü, das auf kleinen Bildschirmen angezeigt wird -->
         <span class="close-menu">&times;</span> <!-- Schließen-Symbol -->
         <nav> <!-- Navigationselement für das mobile Menü -->
-            <a href="index.html">Home</a> <!-- Link zur Startseite -->
+            <a href="../index.html">Home</a> <!-- Link zur Startseite -->
             <a href="#">Über uns</a> <!-- Link zur "Über uns"-Seite -->
             <a href="#">Dienste</a> <!-- Link zur Seite mit den angebotenen Diensten -->
             <a href="#">Kontakt</a>
@@ -61,93 +61,21 @@
 
  <!------------------------------------------ Hauptinhalt (Main) ------------------------------------------>
 
- 
-
-    <section class="article-content">
-        <h1>Sicherheitspatches auf Linux/Windows-Systemen anwenden: Ein Leitfaden</h1>
-        <p>
-            Die Sicherheit von IT-Systemen ist eines der wichtigsten Themen für IT-Administratoren. Eine der effektivsten Maßnahmen, um Systeme vor Angriffen zu schützen, ist das regelmäßige Anwenden von Sicherheitspatches.
-        </p>
-        <h2>Warum sind Sicherheitspatches wichtig?</h2>
-        <p>
-            Sicherheitspatches schließen Schwachstellen in Betriebssystemen oder Anwendungen, die von Angreifern ausgenutzt werden könnten. Diese Schwachstellen können eine Vielzahl von Bedrohungen ermöglichen, wie:
-        </p>
-        <ul>
-            <li>Unbefugter Zugriff auf vertrauliche Daten</li>
-            <li>Schadsoftware-Infektionen</li>
-            <li>Denial-of-Service-Angriffe</li>
-            <li>Komprimierung ganzer Netzwerke</li>
-        </ul>
-        <h2>1. Sicherheitspatches auf Linux-Systemen</h2>
-        <h3>Paketverwaltung unter Linux</h3>
-        <p>
-            Linux-Systeme nutzen Paketmanager, um Updates und Sicherheitspatches zu verwalten. Der jeweilige Paketmanager variiert je nach Distribution:
-        </p>
-        <ul>
-            <li>APT für Ubuntu/Debian-basierte Distributionen</li>
-            <li>YUM oder DNF für Fedora/CentOS/RHEL</li>
-            <li>Zypper für openSUSE/SUSE</li>
-        </ul>
-
-        <h3>Sicherheitspatches mit APT anwenden (Ubuntu/Debian)</h3>
-        <ol>
-            <li>System aktualisieren:
-                <pre><code>sudo apt update</code></pre>
-            </li>
-            <li>Sicherheitsupdates installieren:
-                <pre><code>sudo apt upgrade</code></pre>
-            </li>
-            <li>Alternativ explizit Sicherheitsupdates einspielen:
-                <pre><code>sudo apt install unattended-upgrades
-sudo unattended-upgrade</code></pre>
-            </li>
-        </ol>
-
-        <h3>Sicherheitspatches mit YUM/DNF anwenden (Fedora/CentOS/RHEL)</h3>
-        <ol>
-            <li>System aktualisieren:
-                <pre><code>sudo yum check-update</code></pre>
-                <pre><code>sudo dnf check-update</code></pre>
-            </li>
-            <li>Updates anwenden:
-                <pre><code>sudo yum update</code></pre>
-                <pre><code>sudo dnf update</code></pre>
-            </li>
-        </ol>
-
-        <h2>2. Sicherheitspatches auf Windows-Systemen</h2>
-        <h3>Windows Update</h3>
-        <ol>
-            <li>Öffne das Startmenü und suche nach „Windows Update“.</li>
-            <li>Klicke auf „Nach Updates suchen“ und installiere verfügbare Updates.</li>
-        </ol>
-
-        <h3>Automatische Updates konfigurieren</h3>
-        <ol>
-            <li>Öffne die Einstellungen.</li>
-            <li>Gehe zu „Update und Sicherheit“ > „Windows Update“.</li>
-            <li>Stelle sicher, dass automatische Updates aktiviert sind.</li>
-        </ol>
-
-        <h2>3. Patch-Management: Best Practices</h2>
-        <ul>
-            <li>Regelmäßige Überwachung von Sicherheitspatches.</li>
-            <li>Patches vor der Installation in einer Testumgebung testen.</li>
-            <li>Vor jeder Installation ein Backup erstellen.</li>
-            <li>Patches während geplanter Wartungsfenster installieren.</li>
-        </ul>
-    </section>
-</main>
 
 
 
 
+        <main> <!-- Der Hauptinhalt der Webseite -->
+            <div class="content"> <!-- Start des Content-Bereichs -->
+                <article>
+                    <h1 class="main-title">Beitragstitel</h1> <!-- Überschrift des Beitrags -->
+                    <img src="../images/beispielbild.jpg" alt="Beispielbild" class="article-image"> <!-- Bild im Beitrag -->
+                    <h2 class="sub-title">Unterüberschrift</h2> <!-- Unterüberschrift des Beitrags -->
+                    <p class="article-text">Die Virtualisierungsinfrastruktur sollte regelmäßig überprüft und bei Bedarf erweitert werden, um </p> <!-- Beitragstext -->
+                </article>
+            </div> <!-- Ende des Content-Bereichs -->
+        </main>
         
-        
-        
-
-    </div> <!-- Ende des Content-Bereichs -->    
-  </main>
   <!------------------------------------------ Ende des Hauptinhalts (Main) ------------------------------------------>
 
   

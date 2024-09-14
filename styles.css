@@ -464,3 +464,44 @@ a {
 .gross-text {
     font-size: 48pt; /* Beispiel für eine größere Schriftgröße */
 }
+
+
+
+
+
+
+/* Stile für Überschriften und Text in Beiträgen */
+
+/* Haupttitel (h1) */
+.main-title {
+    font-size: 32px; /* Größe des Haupttitels */
+    font-weight: bold; /* Fettschrift für den Haupttitel */
+    color: #333; /* Textfarbe des Titels */
+    text-align: center; /* Textausrichtung */
+    margin-bottom: 20px; /* Abstand unter dem Titel */
+}
+
+/* Untertitel (h2) */
+.sub-title {
+    font-size: 24px; /* Größe der Unterüberschrift */
+    font-weight: 600; /* Schriftgewicht */
+    color: #555; /* Textfarbe der Unterüberschrift */
+    margin-top: 20px; /* Abstand über der Unterüberschrift */
+    margin-bottom: 15px; /* Abstand unter der Unterüberschrift */
+}
+
+/* Allgemeiner Text (p) */
+.article-text {
+    font-size: 18px; /* Textgröße des Beitrags */
+    line-height: 1.6; /* Zeilenhöhe für bessere Lesbarkeit */
+    color: #666; /* Textfarbe */
+    margin-bottom: 20px; /* Abstand unter jedem Absatz */
+}
+
+/* Bild im Artikel */
+.article-image {
+    max-width: 100%; /* Bild wird auf die maximale Breite des Containers begrenzt */
+    height: auto; /* Höhe wird proportional angepasst */
+    display: block;
+    margin: 0 auto 20px auto; /* Zentriert das Bild und fügt Abstand darunter hinzu */
+}
