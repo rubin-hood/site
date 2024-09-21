@@ -389,9 +389,9 @@ footer p {
     border-radius: 8px; /* Macht die Ecken des Rahmens abgerundet */
     margin: 10px; /* Abstand zwischen den Beiträgen */
     padding: 10px; /* Innenabstand innerhalb des Beitrags */
-    width: 340px; /* Breite des Containers */
+    width: 360px; /* Breite des Containers */
     height: 160px; /* Feste Höhe des Beitrags */
-    max-width: 340px; /* Maximale Breite */
+    max-width: 400px; /* Maximale Breite */
     opacity: 0; /* Beitrag ist anfangs unsichtbar */
     transition: transform 2s ease-out, opacity 2s ease-out; /* Definiert die Übergangsanimationen für Sichtbarkeit und Bewegung */
     background-color: #FCFBF7; /* Hintergrundfarbe des Beitrags */
@@ -434,12 +434,12 @@ img {
     float: center; /* Bild nach rechts ausrichten */
     margin-left: auto;
     margin-right: auto; /* Zentriert das Bild horizontal */
-    filter: grayscale(100%); /* Macht das Bild schwarz-weiß */
+    /* filter: grayscale(100%); /* Macht das Bild schwarz-weiß */
     padding: 10px;
 }
 
 .post img:hover {
-    filter: grayscale(0%); /* Entfernt den Schwarz-Weiß-Effekt beim Hover */
+    /* filter: grayscale(0%); /* Entfernt den Schwarz-Weiß-Effekt beim Hover */
 }
 
 
