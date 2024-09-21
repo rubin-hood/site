@@ -50,7 +50,7 @@ window.addEventListener('load', function() {
     for (let i = 0; i < 3 && i < posts.length; i++) {
         setTimeout(() => {
             posts[i].classList.add('visible');
-        }, i * 300);
+        }, i * 500);
     }
 });
 
@@ -62,10 +62,11 @@ document.addEventListener('scroll', function() {
         if (post.getBoundingClientRect().top + window.scrollY < scrollPosition) {
             setTimeout(() => {
                 post.classList.add('visible');
-            }, (index + 3) * 100);
+            }, index * 300); // Hier wird der Index genutzt, um die Animation nacheinander zu starten
         }
     });
 });
+
 
 /*---------------------------------- Lazy Loading für Bilder ----------------------------------*/
 document.addEventListener('DOMContentLoaded', function() {

@@ -6,8 +6,11 @@
 }
 
 /* --------------------------------- Grundlegendes Body-Styling --------------------------------- */
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
+
 body {
-    font-family: 'Larken Regular', sans-serif; /* Setzt die Schriftart auf Arial oder eine serifenlose Ersatzschrift */
+    font-family: 'Open Sans', sans-serif; /* Setzt die Schriftart auf Arial oder eine serifenlose Ersatzschrift */
     margin: 0; /* Entfernt den Standardabstand um den gesamten Seiteninhalt */
     background-color: #F6F5F1; /* Setzt die Hintergrundfarbe der Seite auf ein helles Grau */
     color: #353534; /* Setzt die Textfarbe auf ein dunkles Grau */
@@ -26,8 +29,12 @@ header {
     top: 0; /* Positioniert den Header am oberen Rand des Bildschirms */
     left: 0; /* Positioniert den Header am linken Rand */
     right: 0; /* Streckt den Header über die gesamte Breite */
-    transition: opacity 1s ease-in-out, visibility 1s ease-in-out; /* Fügt eine Übergangsanimation für Opazität und Sichtbarkeit hinzu */
-    /* z-index: 1000; /* Stellt sicher, dass der Header über dem Rest der Seite bleibt */
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out; /* Fügt eine Übergangsanimation für Opazität und Sichtbarkeit hinzu $*/
+    z-index: 1000; /* Stellt sicher, dass der Header über dem Rest der Seite bleibt $*/
+}
+
+html {
+    overflow-y: scroll; /* $*/
 }
 
 .logo-img {
@@ -135,7 +142,7 @@ header {
     width: 200px;
     padding: 20px;
     border-left: 1px solid #c2c2c2;
-    transition: right 0.5s ease; /* Transition auch im Ausgangszustand definieren */
+    transition: right 0.3s ease; /* Transition auch im Ausgangszustand definieren */
 }
 
 .mobile-menu.open {
@@ -223,7 +230,7 @@ main {
     max-width: 1200px; /* Maximale Breite von 1200px, um auf großen Bildschirmen nicht zu breit zu werden */
     margin: 30px auto 0 auto; /* Setzt 200px nach oben und zentriert horizontal */
     padding: 20px; /* Fügt innenliegenden Abstand hinzu, um den Inhalt vom Rand abzusetzen */
-    background-color: #F6F5F1; /* Setzt die Hintergrundfarbe des Content-Bereichs auf weiß */
+    background-color: #FCFBF7; /* Setzt die Hintergrundfarbe des Content-Bereichs auf weiß */
     /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Fügt einen leichten Schatten hinzu, um den Bereich hervorzuheben */
     border-radius: 8px; /* Rundet die Ecken des Content-Bereichs ab */
 }
@@ -297,7 +304,7 @@ footer p {
 }
 
 .e {
-    animation: slideInFromBottom 1s ease-in-out; /* Animation anwenden, Dauer: 3 Sekunden */
+    animation: slideInFromTop 3s ease-in-out; /* Animation anwenden, Dauer: 3 Sekunden */
     margin-bottom: 18px; /* Abstand unter dem Logo */
     margin-bottom: 20px; /* Füge einen Abstand unter dem Text hinzu */
     text-align: left; /* Zentriert den Text im Hauptinhalt */
@@ -378,20 +385,21 @@ footer p {
 .post {
     display: flex; /* Macht den Beitrag zu einem flexiblen Container für Inhalt */
     gap: 10px; /* Abstand zwischen den Elementen im Beitrag */
-    /*border: 1px solid #c2c2c2; /* Gibt dem Beitrag einen Rahmen */
+    border: 1px solid #c2c2c2; /* Gibt dem Beitrag einen Rahmen */
     border-radius: 8px; /* Macht die Ecken des Rahmens abgerundet */
     margin: 10px; /* Abstand zwischen den Beiträgen */
     padding: 10px; /* Innenabstand innerhalb des Beitrags */
     width: 340px; /* Breite des Containers */
-    height: 340px; /* Feste Höhe des Beitrags */
+    height: 160px; /* Feste Höhe des Beitrags */
     max-width: 340px; /* Maximale Breite */
     opacity: 0; /* Beitrag ist anfangs unsichtbar */
     transition: transform 2s ease-out, opacity 2s ease-out; /* Definiert die Übergangsanimationen für Sichtbarkeit und Bewegung */
-    background-color: #F6F5F1; /* Hintergrundfarbe des Beitrags */
-    transform: translateY(50%); /* Startposition des Beitrags ist unterhalb des sichtbaren Bereichs */
+    background-color: #FCFBF7; /* Hintergrundfarbe des Beitrags */
+    transform: translateY(80%); /* Startposition des Beitrags ist unterhalb des sichtbaren Bereichs */
     align-items: center; /* NEU: Zentriert das Bild und den Text horizontal */
-    flex-direction: column; /* NEU: Anordnung der Kinder (Bild und Text) vertikal */
+    flex-direction: row; /* NEU: Anordnung der Kinder (Bild und Text) vertikal */
     justify-content: center; /* Zentriert den Inhalt vertikal */
+
 }
 
 
@@ -417,7 +425,7 @@ img {
 }
 
 .post img {
-    width: 230px; /* Breite des Bildes */
+    width: 100px; /* Breite des Bildes */
     height: auto; /* Höhe des Bildes */
     display: block; /* Verwandelt das Bild in ein Blockelement */
     object-fit: contain; /* Das Bild wird so skaliert, dass es den gesamten verfügbaren Platz einnimmt, ohne verzerrt zu werden */
@@ -436,18 +444,24 @@ img {
 
 
 .post-content {
-    flex: 1; /* Der Textinhalt nimmt den verbleibenden Platz im Beitrag ein */
-    padding: 10px; /* Innenabstand links und rechts des Textinhalts */
-    text-align: left; /* NEU: Zentriert den Text */
+    /* flex: 1; /* Der Textinhalt nimmt den verbleibenden Platz im Beitrag ein */
+    /* padding: 10px; /* Innenabstand links und rechts des Textinhalts */
+    /* text-align: left; /* NEU: Zentriert den Text */
+
+    display: -webkit-box; /* Verwendet flexiblen Box-Layout */
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 8; /* Anzahl der angezeigten Zeilen */
+    overflow: hidden; /* Versteckt den überfließenden Text */
+    text-overflow: ellipsis; /* Zeigt "..." am Ende des Textes */
 }
 
 .post-content h2 {
-    font-size: 16px; /* Schriftgröße der Überschrift */
+    font-size: 14px; /* Schriftgröße der Überschrift */
     margin-bottom: 5px; /* NEU: KLEINERER ABSTAND UNTER DER ÜBERSCHRIFT */
 }
 
 .post-content p {
-    font-size: 14px; /* NEU: KLEINERE SCHRIFTGRÖSSE DES TEXTES */
+    font-size: 13px; /* NEU: KLEINERE SCHRIFTGRÖSSE DES TEXTES */
 }
 
 .nav-links a {
@@ -470,38 +484,93 @@ a {
 
 
 
-/* Stile für Überschriften und Text in Beiträgen */
 
-/* Haupttitel (h1) */
-.main-title {
-    font-size: 32px; /* Größe des Haupttitels */
-    font-weight: bold; /* Fettschrift für den Haupttitel */
-    color: #333; /* Textfarbe des Titels */
-    text-align: center; /* Textausrichtung */
-    margin-bottom: 20px; /* Abstand unter dem Titel */
+/* Allgemeine Stile für den gesamten Blog */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
+
+/* Allgemeine Stile */
+.blogbeitrag body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    /* max-width: 800px; /* Begrenzung der Breite */
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
 }
 
-/* Untertitel (h2) */
-.sub-title {
-    font-size: 24px; /* Größe der Unterüberschrift */
-    font-weight: 600; /* Schriftgewicht */
-    color: #555; /* Textfarbe der Unterüberschrift */
-    margin-top: 20px; /* Abstand über der Unterüberschrift */
-    margin-bottom: 15px; /* Abstand unter der Unterüberschrift */
+/* Titel des Blogbeitrags */
+.blogbeitrag h1 {
+    text-align: center; /* Mittig ausgerichtet */
+    font-size: 2.0em;
+    margin-top: 0px; /* Abstand nach oben */
+    margin-bottom: 80px; /* Abstand nach unten */
+    font-weight: bold;
 }
 
-/* Allgemeiner Text (p) */
-.article-text {
-    font-size: 18px; /* Textgröße des Beitrags */
-    line-height: 1.6; /* Zeilenhöhe für bessere Lesbarkeit */
-    color: #666; /* Textfarbe */
-    margin-bottom: 20px; /* Abstand unter jedem Absatz */
+/* Überschriftenstile */
+.blogbeitrag h2, h3 {
+    text-align: center; /* Mittig ausgerichtet */
+    margin-top: 30px; /* Gleicher Abstand nach oben */
+    margin-bottom: 20px; /* Gleicher Abstand nach unten */
 }
 
-/* Bild im Artikel */
-.article-image {
-    max-width: 100%; /* Bild wird auf die maximale Breite des Containers begrenzt */
-    height: auto; /* Höhe wird proportional angepasst */
+/* Textstil für Absätze */
+.blogbeitrag p {
+    margin-bottom: 20px;
+}
+
+/* Codeblöcke */
+.blogbeitrag pre {
+    background-color: #F6F8FA;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    overflow-x: auto;
+    color: #000000; /* Ändere hier die Textfarbe für Inline-Code */
+    border: 2px solid #D0D7DE; /* Rahmen mit Farbe, Größe und Stil */
+}
+
+.blogbeitrag code {
+    font-family: Consolas, monospace;
+}
+
+/* Nummerierte Listen */
+.blogbeitrag ol {
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+/* Ungeordnete Listen */
+.blogbeitrag ul {
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+/* Links */
+.blogbeitrag a {
+    color: #1a0dab;
+    text-decoration: none;
+}
+
+.blogbeitrag a:hover {
+    text-decoration: underline;
+}
+
+/* Starker Text */
+.blogbeitrag strong {
+    font-weight: bold;
+}
+
+.blogbeitrag img {
     display: block;
-    margin: 0 auto 20px auto; /* Zentriert das Bild und fügt Abstand darunter hinzu */
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 400px; /* Verhindert, dass das Bild größer als der Container wird */
+    height: auto; /* Beibehaltung des Seitenverhältnisses */
+    margin-bottom: 20px; /* Abstand nach unten */
+    /* border: 2px solid #D0D7DE; /* Optionaler Rahmen um das Bild */
+    border-radius: 5px; /* Optional: Abgerundete Ecken */
+    cursor: pointer; /* Zeigt an, dass das Bild anklickbar ist */
 }
