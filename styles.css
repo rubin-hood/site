@@ -425,12 +425,13 @@ img {
 }
 
 .post img {
-    width: 100px; /* Breite des Bildes */
+    width: auto; /* Breite des Bildes */
+    /* max-width: 100%; /* Bild wird nicht breiter als der Container */
+    max-height: 150px; /* NEU: Maximale Höhe des Bildes, um sicherzustellen, dass es nicht zu groß wird */
     height: auto; /* Höhe des Bildes */
     display: block; /* Verwandelt das Bild in ein Blockelement */
     object-fit: contain; /* Das Bild wird so skaliert, dass es den gesamten verfügbaren Platz einnimmt, ohne verzerrt zu werden */
     border-radius: 8px; /* Ecken des Bildes werden abgerundet */
-    /*max-height: 150px; /* NEU: Maximale Höhe des Bildes, um sicherzustellen, dass es nicht zu groß wird */
     float: center; /* Bild nach rechts ausrichten */
     margin-left: auto;
     margin-right: auto; /* Zentriert das Bild horizontal */
