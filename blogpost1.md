@@ -1,6 +1,6 @@
 # Mein erster Blogpost
 
-![Alternativtext](https://lh4.googleusercontent.com/NIWAi75rca2dH2_Dybrtte8iKjRs5m3EMPg_GySxtJZ3hU0uPJYER9DC-uujwF-g5fiOT4WkN_hzFshcHES_tsRfZR6VhrVOYtDyK4iL2JDou6a4qm1hp_zFk-8QMvHJkQ=w1280)
+![Alternativtext](https://ghost.stiehl-wolf.synology.me/content/images/size/w1304/format/webp/2023/11/Was-ist--4032-x-2800-px--1.png)
 
 Willkommen zu meinem ersten Blogbeitrag auf dieser Seite. Dies ist ein Beispiel, wie man einen Blogpost mit **Markdown** schreiben kann.
 
