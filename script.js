@@ -89,41 +89,40 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
-
-
-
-
-
-
-
-
-// Inhalte für verschiedene Seiten
-const pages = {
-    home: "<h2>Willkommen auf der Startseite!</h2><p>Dies ist die Startseite.</p>",
-    about: "<h2>Über uns</h2><p>Informationen über unser Unternehmen.</p>",
-    services: "<h2>Dienste</h2><p>Unsere angebotenen Dienstleistungen.</p>",
-    contact: "<h2>Kontakt</h2><p>Hier können Sie uns kontaktieren.</p>",
-};
-
-// Funktion zum Laden des Seiteninhalts
-function navigateTo(page) {
-    // Ändere den Hauptinhalt
-    document.getElementById('main-content').innerHTML = pages[page] || pages['home'];
+/*---------------------------------- Bild öffnen Funktion ----------------------------------*/
+function openImage() {
+    var fullImageDiv = document.createElement("div");
+    fullImageDiv.id = "fullImage";
+    fullImageDiv.onclick = function() {
+        document.body.removeChild(fullImageDiv);
+    };
     
-    // Ändere die URL in der Adressleiste
-    window.history.pushState({ page: page }, "", page);
+    var fullImage = document.createElement("img");
+    fullImage.src = document.getElementById("smallImage").src;
+    
+    fullImageDiv.appendChild(fullImage);
+    document.body.appendChild(fullImageDiv);
 }
 
-// Füge ein Ereignis hinzu, um den Inhalt bei Vorwärts/Rückwärts-Navigation zu aktualisieren
-window.onpopstate = function(event) {
-    if (event.state && event.state.page) {
-        navigateTo(event.state.page);
-    } else {
-        navigateTo('home');
-    }
-};
 
-// Lade die Startseite beim ersten Laden der Seite
-document.addEventListener('DOMContentLoaded', function () {
-    navigateTo('home');
-});
+
+
+function loadContent(page) {
+    fetch(page)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Netzwerkantwort war nicht ok.');
+            }
+            return response.text();
+        })
+        .then(data => {
+            document.getElementById('content').innerHTML = data;
+        })
+        .catch(error => {
+            console.error('Fehler beim Laden des Inhalts:', error);
+        });
+
+
+            // Ändere die URL in der Adressleiste
+    window.history.pushState({ page: page }, "", page);
+}

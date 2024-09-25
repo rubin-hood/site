@@ -8,16 +8,17 @@
     <script defer src="script.js"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
+
 <body>
     <header>
         <a href="index.html" class="logo">
             <img src="logo/logo.png" alt="Rubin Logo" class="logo-img">
         </a>        
         <nav class="nav-links">
-            <a href="#" onclick="navigateTo('home')">Home</a>
-            <a href="about.html" onclick="navigateTo('about')">Über uns</a>
-            <a href="#" onclick="navigateTo('services')">Dienste</a>
-            <a href="#" onclick="navigateTo('contact')">Kontakt</a>
+            <a href="#" onclick="loadContent('home.html')">Home</a>
+            <a href="#" onclick="loadContent('about.html')">Über mich</a>
+            <a href="#" onclick="loadContent('services.html')">Dienste</a>
+            <a href="#" onclick="loadContent('contact.html')">Kontakt</a>
         </nav>
         
         <div class="social-icons">
@@ -35,10 +36,10 @@
     <div class="mobile-menu">
         <span class="close-menu">&times;</span>
         <nav>
-            <a href="#" onclick="navigateTo('home')">Home</a>
-            <a href="#" onclick="navigateTo('about')">Über uns</a>
-            <a href="#" onclick="navigateTo('services')">Dienste</a>
-            <a href="#" onclick="navigateTo('contact')">Kontakt</a>
+            <a href="#" onclick="loadContent('home.html')">Home</a>
+            <a href="#" onclick="loadContent('about.html')">Über uns</a>
+            <a href="#" onclick="loadContent('services.html')">Dienste</a>
+            <a href="#" onclick="loadContent('contact.html')">Kontakt</a>
         </nav>
         <div class="mobile-social-icons">
             <a href="#" class="fa-brands fa-github"></a>
@@ -47,12 +48,115 @@
         </div>
     </div>
 
-    <main id="main-content">
-        <!-- Dynamischer Seiteninhalt wird hier geladen -->
-    </main>
+    <main id="content">
+        <!-- Dynamischer Inhalt wird hier geladen -->
+
+
+
+
+        <div class="content"> <!-- Start des Content-Bereichs -->
+            <p class="slide-in a">Der digitale Wald, in dem Kreativität und Technologie aufeinander treffen.</p>
+            <p class="slide-in b">Hallo und herzlich willkommen!</p>
+            <p class="slide-in c">Ich heiße Andreas, und ich habe diese Website ins Leben gerufen, um meine Leidenschaft für IT-Projekte zu präsentieren.</p>
+            <p class="slide-in e">Diese Webseite wurde, abgesehen vom Domainnamen, komplett kostenlos erstellt. Sie wird auf Netlify gehostet, und der Code ist in meinem öffentlichen GitHub-Repository verfügbar.</p>
+            <p class="slide-in d">Wie der legendäre Held Robin Hood, der Gutes tat und die Welt auf seine Weise veränderte, möchte auch ich durch innovative Lösungen und kreative Ansätze einen positiven Beitrag leisten – aber eben in der Welt der IT.</p>
+            
+            
+            
+            <div class="slide-in b"> <!-- Start des Content-Bereichs -->
+      
+              <!---------------------------------- Hier Überschrift ---------------------------------->
+      
+           </div>
+            
+            <div class="slide-in e"> <!-- Start des Content-Bereichs -->
+      
+               <!---------------------------------- Hier Text ---------------------------------->
+      
+            </div>
+            <!---------------------------------- Blog-Beiträge ---------------------------------->
+      <section class="posts"> <!-- Abschnitt für Blog-Beiträge -->
+      
+      <!-- 1 Beitrag -->
+        <a href="articles/virtualization-in-large-companies.html">
+        <div class="post" style="animation-delay: 1s;">
+          <img src="images/virtualization-in-large-companies.jpg" alt="Beitragsbild 1" loading="lazy"> <!-- Bild des ersten Beitrags -->
+            <div class="post-content">
+                <h2>Virtualisierung im Großunternehmen: Ein Leitfaden für eine effiziente IT-Infrastruktur</h2> <!-- Titel des ersten Beitrags -->
+                <p>In der modernen digitalen Ära ist eine leistungsfähige IT-Infrastruktur für Unternehmen unerlässlich. Besonders für Firmen mit etwa 1000 Mitarbeitern bietet die Virtualisierung enorme Vorteile. Aber wie funktioniert das Ganze? Lassen Sie uns einen Blick auf die wichtigsten Komponenten und deren Zusammenspiel werfen.</p> <!-- Beschreibung des ersten Beitrags -->
+            </div>
+        </div>
+        </a>
+        <!-- Weitere Beiträge folgen dem gleichen Schema -->
+      
+        <!-- 2 Beitrag -->
+      <a href="articles/apply-security-patches-on-linux-windows-systems.html">
+          <div class="post" style="animation-delay: 3s;"> 
+            <img src="images/apply-security-patches-on-linux-windows-systems.jpg" alt="Beitragsbild 1" loading="lazy"> <!-- Bild des ersten Beitrags -->
+              <div class="post-content">
+                  <h2>Sicherheitspatches auf Linux/Windows-Systemen anwenden</h2> <!-- Titel des ersten Beitrags -->
+                  <p>Der Schutz von IT-Systemen vor Angriffen und Schwachstellen ist eine der wichtigsten Aufgaben in der Systemadministration. Eine zentrale Rolle spielen dabei Sicherheitspatches, die regelmäßig installiert werden müssen, um die Abwehr gegen neue Bedrohungen zu stärken. Dieser Beitrag zeigt, wie man auf Linux- und Windows-Systemen am besten vorgeht, um sicherzustellen, dass Patches schnell und zuverlässig angewendet werden.</p> <!-- Beschreibung des ersten Beitrags -->
+              </div>
+          </div>
+          </a>
+      
+      <!-- 3 Beitrag -->
+      <a href="articles/local-area-network.html">
+          <div class="post" style="animation-delay: 6s;"> 
+            <img src="images/local-area-network.jpg" alt="Beitragsbild 1" loading="lazy"> <!-- Bild des ersten Beitrags -->
+              <div class="post-content">
+                  <h2>Alles, was du über Local Area Networks (LAN) wissen musst</h2> <!-- Titel des ersten Beitrags -->
+                  <p>Überall um uns herum finden wir heutzutage Netzwerke, die unser Leben prägen. Ob zu Hause, im Büro oder in Schulen – sie bilden das Rückgrat unserer digitalen Kommunikation. Ein besonders weit verbreitetes Netzwerk ist das Local Area Network, besser bekannt als LAN. Doch was verbirgt sich hinter diesem Begriff, und warum ist es so wichtig für unsere tägliche Arbeit? In diesem Artikel klären wir das!</p> <!-- Beschreibung des ersten Beitrags -->
+              </div>
+          </div>
+          </a>
+      
+      <!-- 4 Beitrag -->
+      <a href="https://dein-link-hier.com">
+          <div class="post" style="animation-delay: 9s;"> 
+            <img src="logo.jpg" alt="Beitragsbild 1" loading="lazy"> <!-- Bild des ersten Beitrags -->
+              <div class="post-content">
+                  <h2>Beitragstitel 1</h2> <!-- Titel des ersten Beitrags -->
+                  <p>Kurzbeschreibung des Beitrags 1. Klick für mehr Details.</p> <!-- Beschreibung des ersten Beitrags -->
+              </div>
+          </div>
+          </a>
+      
+      <!-- 5 Beitrag -->
+      <a href="https://dein-link-hier.com">
+          <div class="post" style="animation-delay: 12s;"> 
+            <img src="logo.jpg" alt="Beitragsbild 1" loading="lazy"> <!-- Bild des ersten Beitrags -->
+              <div class="post-content">
+                  <h2>Beitragstitel 1</h2> <!-- Titel des ersten Beitrags -->
+                  <p>Kurzbeschreibung des Beitrags 1. Klick für mehr Details.</p> <!-- Beschreibung des ersten Beitrags -->
+              </div>
+          </div>
+          </a>
+      
+      <!-- 6 Beitrag -->
+      <a href="articles/local-area-network.html">
+          <div class="post" style="animation-delay: 15s;"> 
+            <img src="logo.jpg" alt="Beitragsbild 1" loading="lazy"> <!-- Bild des ersten Beitrags -->
+              <div class="post-content">
+                  <h2>Beitragstitel 1</h2> <!-- Titel des ersten Beitrags -->
+                  <p>Kurzbeschreibung des Beitrags 1. Klick für mehr Details.</p> <!-- Beschreibung des ersten Beitrags -->
+              </div>
+          </div>
+          </a>
+      
+      </section>
+      <!---------------------------------- Ende Blog-Beiträge ---------------------------------->
+      
+          </div> <!-- Ende des Content-Bereichs -->    
+        </main>
+
+
+
+
 
     <footer>
         <p>© 2024 Rubin-Hood</p>
     </footer>
+
 </body>
 </html>
