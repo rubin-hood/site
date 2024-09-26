@@ -1,48 +1,49 @@
 /* --------------------------------- Auswählen der Hamburger- und Mobile-Menü-Elemente --------------------------------- */
-const hamburgerMenu = document.querySelector('.hamburger-menu'); 
-// Wählt das HTML-Element mit der Klasse 'hamburger-menu' aus und speichert es in der Variable 'hamburgerMenu'.
+// Diese Funktion wird aufgerufen, nachdem der Header geladen wurde
+function setupMenu() {
+    const hamburgerMenu = document.querySelector('.hamburger-menu');
+    const mobileMenu = document.querySelector('.mobile-menu');
+    const closeMenu = document.querySelector('.close-menu');
 
-const mobileMenu = document.querySelector('.mobile-menu'); 
-// Wählt das HTML-Element mit der Klasse 'mobile-menu' aus und speichert es in der Variable 'mobileMenu'.
+    if (hamburgerMenu && mobileMenu && closeMenu) {
+        /* --------------------------------- Event Listener für das Hamburger-Menü --------------------------------- */
+        hamburgerMenu.addEventListener('click', () => { 
+            mobileMenu.classList.toggle('open'); 
+        });
 
-const closeMenu = document.querySelector('.close-menu'); 
-// Wählt das Schließen-Symbol im mobilen Menü aus
+        /* --------------------------------- Event Listener für das Schließen-Symbol --------------------------------- */
+        closeMenu.addEventListener('click', () => {
+            mobileMenu.classList.remove('open'); 
+        });
 
-/* --------------------------------- Event Listener für das Hamburger-Menü --------------------------------- */
-hamburgerMenu.addEventListener('click', () => { 
-    // Fügt einen Klick-Event-Listener zum Hamburger-Menü hinzu
-    mobileMenu.classList.toggle('open'); 
-    // Schaltet die Klasse 'open' im 'mobileMenu' um, damit das Menü ein- und ausgeblendet wird
-});
-
-/* --------------------------------- Event Listener für das Schließen-Symbol --------------------------------- */
-closeMenu.addEventListener('click', () => {
-    mobileMenu.classList.remove('open'); 
-    // Schließt das mobile Menü beim Klicken auf das Schließen-Symbol
-});
-
-// Schließen des Menüs beim Klicken außerhalb des Menüs
-document.addEventListener('click', (event) => {
-    if (!mobileMenu.contains(event.target) && !hamburgerMenu.contains(event.target) && !closeMenu.contains(event.target)) {
-        mobileMenu.classList.remove('open');
+        // Schließen des Menüs beim Klicken außerhalb des Menüs
+        document.addEventListener('click', (event) => {
+            if (!mobileMenu.contains(event.target) && !hamburgerMenu.contains(event.target) && !closeMenu.contains(event.target)) {
+                mobileMenu.classList.remove('open');
+            }
+        });
     }
-});
+}
 
 /*---------------------------------- Steuerung der Header-Transparenz beim Scrollen ----------------------------------*/
 let lastScrollTop = 0; 
-let header = document.querySelector('header'); 
+let header; // Header wird später definiert
 
-window.addEventListener('scroll', function() {
-    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+function setupScrollListener() {
+    header = document.querySelector('header'); // Header wird neu geladen, nachdem er durch fetch() eingefügt wurde
 
-    if (scrollTop > lastScrollTop) {
-        header.classList.add('header-transparent');
-    } else if (scrollTop === 0) {
-        header.classList.remove('header-transparent');
-    }
+    window.addEventListener('scroll', function() {
+        let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
-    lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
-});
+        if (scrollTop > lastScrollTop) {
+            header.classList.add('header-transparent');
+        } else if (scrollTop === 0) {
+            header.classList.remove('header-transparent');
+        }
+
+        lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+    });
+}
 
 /*---------------------------------- Beiträge Animationen beim Laden und Scrollen ----------------------------------*/
 window.addEventListener('load', function() {
@@ -67,7 +68,6 @@ document.addEventListener('scroll', function() {
     });
 });
 
-
 /*---------------------------------- Lazy Loading für Bilder ----------------------------------*/
 document.addEventListener('DOMContentLoaded', function() {
     const lazyImages = document.querySelectorAll('img[loading="lazy"]');
@@ -89,40 +89,23 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
-/*---------------------------------- Bild öffnen Funktion ----------------------------------*/
-function openImage() {
-    var fullImageDiv = document.createElement("div");
-    fullImageDiv.id = "fullImage";
-    fullImageDiv.onclick = function() {
-        document.body.removeChild(fullImageDiv);
-    };
-    
-    var fullImage = document.createElement("img");
-    fullImage.src = document.getElementById("smallImage").src;
-    
-    fullImageDiv.appendChild(fullImage);
-    document.body.appendChild(fullImageDiv);
-}
-
-
-
-
-function loadContent(page) {
-    fetch(page)
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Netzwerkantwort war nicht ok.');
-            }
-            return response.text();
-        })
+/*---------------------------------- Header und Footer dynamisch laden ----------------------------------*/
+document.addEventListener("DOMContentLoaded", function () {
+    // Header laden
+    fetch('header.html')
+        .then(response => response.text())
         .then(data => {
-            document.getElementById('content').innerHTML = data;
+            document.getElementById('header').innerHTML = data;
+            setupMenu(); // Menü-Event-Listener einrichten
+            setupScrollListener(); // Scroll-Listener erst nach Laden des Headers einrichten
         })
-        .catch(error => {
-            console.error('Fehler beim Laden des Inhalts:', error);
-        });
+        .catch(error => console.error('Fehler beim Laden des Headers:', error));
 
-
-            // Ändere die URL in der Adressleiste
-    window.history.pushState({ page: page }, "", page);
-}
+    // Footer laden
+    fetch('footer.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('footer').innerHTML = data;
+        })
+        .catch(error => console.error('Fehler beim Laden des Footers:', error));
+})
