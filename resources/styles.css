@@ -29,6 +29,7 @@ header {
     top: 0; /* Positioniert den Header am oberen Rand des Bildschirms */
     left: 0; /* Positioniert den Header am linken Rand */
     right: 0; /* Streckt den Header über die gesamte Breite */
+    opacity: 1;
     transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out; /* Fügt eine Übergangsanimation für Opazität und Sichtbarkeit hinzu $*/
     z-index: 1000; /* Stellt sicher, dass der Header über dem Rest der Seite bleibt $*/
 }
