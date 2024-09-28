@@ -1,0 +1,6 @@
+services:
+  - type: web
+    name: my-php-site
+    env: php
+    buildCommand: ""
+    startCommand: "php -S 0.0.0.0:8080 -t ."
