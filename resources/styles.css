@@ -1,3 +1,4 @@
+
 /* --------------------------------- Globales Styling --------------------------------- */
 * {
     margin: 0; /* Entfernt Standardabstände um alle Elemente herum */
@@ -9,11 +10,16 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
 
+
+
 body {
     font-family: 'Open Sans', sans-serif; /* Setzt die Schriftart auf Arial oder eine serifenlose Ersatzschrift */
     margin: 0; /* Entfernt den Standardabstand um den gesamten Seiteninhalt */
     background-color: #F6F5F1; /* Setzt die Hintergrundfarbe der Seite auf ein helles Grau */
-    color: #353534; /* Setzt die Textfarbe auf ein dunkles Grau */
+    color: #202020; /* Setzt die Textfarbe auf ein dunkles Grau */
+
+    font-size: 18px;
+    /*line-height: 1.6;
 }
 
 /* --------------------------------- Header Styling --------------------------------- */
@@ -23,15 +29,19 @@ header {
     align-items: center; /* Zentriert die Elemente vertikal im Header */
     padding: 15px 30px; /* Fügt Innenabstände von 15px oben/unten und 30px links/rechts hinzu */
     background-color: #F6F5F1; /* Setzt die Hintergrundfarbe des Headers auf ein dunkles Grau (#444) */
-    color: #AFB0B6; /* Setzt die Textfarbe im Header auf Weiß */
-    /* box-shadow: 0 2px 5px rgba(4,164,186); /* Fügt einen kleinen Schatten unter dem Header hinzu */
+    /*background: linear-gradient(135deg, #9b111e, #b22034, #7d1128, #a10035); */
+    /*background: linear-gradient(135deg, #a8e6cf, #57c785, #009c6c, #007f56);
+    color: #ffffff; /* Setzt die Textfarbe im Header auf Weiß */
+    /* box-shadow: 0 1px 5px rgb(54, 54, 54); /* Fügt einen kleinen Schatten unter dem Header hinzu */
     position: fixed; /* Fixiert den Header am oberen Rand des Fensters */
-    top: 0; /* Positioniert den Header am oberen Rand des Bildschirms */
+    top: 0px; /* Positioniert den Header am oberen Rand des Bildschirms */
     left: 0; /* Positioniert den Header am linken Rand */
     right: 0; /* Streckt den Header über die gesamte Breite */
     opacity: 1;
     transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out; /* Fügt eine Übergangsanimation für Opazität und Sichtbarkeit hinzu $*/
     z-index: 1000; /* Stellt sicher, dass der Header über dem Rest der Seite bleibt $*/
+    height: 60px; /* Feste Höhe für den Header */
+    /*min-height: 100px; /* Beispielhafte feste Höhe */
 }
 
 html {
@@ -39,9 +49,11 @@ html {
 }
 
 .logo-img {
-    width: 50px; /* Breite des Logos */
+    width: 80px; /* Breite des Logos */
     height: auto; /* Höhe passt sich proportional zur Breite an */
-    /* box-shadow: 0 2px 5px rgba(4,164,186); /* Fügt einen kleinen Schatten unter dem Header hinzu */
+    margin-top: 10px; /* Fügt einen oberen Abstand von 20px hinzu */
+    /*box-shadow: 0 2px 5px rgba(4,164,186); /* Fügt einen kleinen Schatten unter dem Header hinzu */
+    z-index: 1100; /* Erhöhe den z-index */
 }
 
 /* Kombinierter Hover-Effekt für Logo, Navigationslinks und Social Media Icons */
@@ -51,13 +63,13 @@ html {
 .mobile-social-icons a:hover,
 .hamburger-menu:hover,
 .mobile-menu a:hover {
-    color: #04A4BA; /* Ändert die Farbe beim Hover */
+    color: #a10035; /* Ändert die Farbe beim Hover */
     transition: transform 0.6s, background-color 0.6s; /* Fügt eine sanfte Übergangsanimation hinzu */
     transform: scale(1.1); /* Vergrößert die Balken leicht beim Hover */
 }
 
 .hamburger-menu:hover span {
-    background-color: #04A4BA; /* Ändert die Farbe der Balken beim Hover */
+    background-color: #009c6c; /* Ändert die Farbe der Balken beim Hover */
 }
 
 /* --------------------------------- Logo Styling --------------------------------- */
@@ -75,9 +87,9 @@ html {
 }
 
 .nav-links a {
-    color: #AFB0B6; /* Setzt die Textfarbe der Links auf Weiß */
+    color: #009c6c; /* Setzt die Textfarbe der Links auf Weiß */
     text-decoration: none; /* Entfernt Unterstreichungen von den Links */
-    font-size: 18px; /* Setzt die Schriftgröße der Links auf 18px */
+    font-size: 23px; /* Setzt die Schriftgröße der Links auf 18px */
     transition: color 0.3s; /* Fügt eine sanfte Übergangsanimation für die Textfarbe hinzu */
 }
 
@@ -94,7 +106,7 @@ html {
 
 .social-icons a {
     /* font-size: 16px; /* Setzt die Schriftgröße der Social Media Icons auf 24 Pixel */
-    color: #AFB0B6; /* Setzt die Farbe der Icons auf Schwarz */
+    color: #009c6c; /* Setzt die Farbe der Icons auf Schwarz */
     transition: color 0.3s ease; /* Fügt einen sanften Übergang hinzu, wenn sich die Farbe ändert */
     /* margin-right: 1px; /* Fügt einen rechten Außenabstand von 10 Pixeln hinzu */
     /* margin-left: 1px; /* Fügt einen linken Außenabstand von 10 Pixeln hinzu */
@@ -125,7 +137,7 @@ html {
 .hamburger-menu span {
     width: 30px; /* Setzt die Breite der Balken des Hamburger-Menüs auf 30px */
     height: 3px; /* Setzt die Höhe der Balken des Hamburger-Menüs auf 3px */
-    background-color: #AFB0B6; /* Setzt die Balkenfarbe auf Weiß */
+    background-color: #009c6c; /* Setzt die Balkenfarbe auf Weiß */
     transition: transform 0.5s; /* Fügt eine sanfte Übergangsanimation für Transformationen hinzu */
 }
 
@@ -142,7 +154,7 @@ html {
     z-index: 1050;
     width: 200px;
     padding: 20px;
-    border-left: 1px solid #c2c2c2;
+    /* border-left: 1px solid #c2c2c2;
     transition: right 0.3s ease; /* Transition auch im Ausgangszustand definieren */
 }
 
@@ -153,7 +165,7 @@ html {
 
 
 .mobile-menu :hover {
-    color: #04A4BA; /* Ändert die Textfarbe der Links beim Hover auf einen goldenen Ton (#f0a500) */
+    color: #009c6c; /* Ändert die Textfarbe der Links beim Hover auf einen goldenen Ton (#f0a500) */
 }
 
 .mobile-menu nav {
@@ -165,7 +177,7 @@ html {
 }
 
 .mobile-menu a {
-    color: #AFB0B6; /* Setzt die Textfarbe der Links im mobilen Menü auf Weiß */
+    color: #2e2e2e; /* Setzt die Textfarbe der Links im mobilen Menü auf Weiß */
     text-decoration: none; /* Entfernt Unterstreichungen von den Links im mobilen Menü */
     font-size: 18px; /* Setzt die Schriftgröße der Links im mobilen Menü auf 18px */
 }
@@ -183,11 +195,11 @@ html {
     right: 30px;
     font-size: 50px;
     cursor: pointer;
-    color: #AFB0B6; /* Setzt die Farbe des Symbols */
+    color: #009c6c; /* Setzt die Farbe des Symbols */
 }
 
 .close-menu:hover {
-    color: #04A4BA; /* Farbe beim Hover (optional) */
+    color: #009c6c; /* Farbe beim Hover (optional) */
 }
 
 
@@ -213,10 +225,6 @@ html {
 }
 
 
-
-
-
-
 /*---------------------------------- Hauptinhalt ----------------------------------*/
 /* Diese Sektion betrifft den Hauptteil der Webseite */
 main {
@@ -229,9 +237,10 @@ main {
 .content { /* Stile für den zentralen Content-Bereich */
     width: 100%; /* Breite des Inhaltsbereichs ist 80% der Seitenbreite */
     max-width: 1200px; /* Maximale Breite von 1200px, um auf großen Bildschirmen nicht zu breit zu werden */
+    min-height: auto; /* Setzt eine minimale Höhe von 300px */
     margin: 30px auto 0 auto; /* Setzt 200px nach oben und zentriert horizontal */
     padding: 20px; /* Fügt innenliegenden Abstand hinzu, um den Inhalt vom Rand abzusetzen */
-    background-color: #FCFBF7; /* Setzt die Hintergrundfarbe des Content-Bereichs auf weiß */
+    background-color: #F6F5F1; /* Setzt die Hintergrundfarbe des Content-Bereichs auf weiß */
     /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Fügt einen leichten Schatten hinzu, um den Bereich hervorzuheben */
     border-radius: 8px; /* Rundet die Ecken des Content-Bereichs ab */
 }
@@ -242,7 +251,7 @@ main {
 /* Diese Sektion betrifft den Fußbereich der Webseite */
 footer {
     background-color: #F6F5F1; /* Setzt die Hintergrundfarbe des Fußbereichs auf Weiß */
-    color: #AFB0B6; /* Setzt die Schriftfarbe */
+    color: #5a5a5a; /* Setzt die Schriftfarbe */
     padding: 100px; /* Fügt einen Innenabstand von 20 Pixeln im Fußbereich hinzu */
     text-align: center; /* Zentriert den Text im Fußbereich */
     /* box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Fügt einen kleinen Schatten oberhalb des Fußbereichs hinzu */
@@ -255,7 +264,7 @@ footer {
 }
 
 footer p {
-    font-size: 14px; /* Ändert die Schriftgröße auf 14 Pixel */
+    font-size: 18px; /* Ändert die Schriftgröße auf 14 Pixel */
     margin: 0; /* Entfernt den Standardaußenabstand für den Absatz im Fußbereich */
 }
 /*---------------------------------- Ende Footer ----------------------------------*/
@@ -266,49 +275,64 @@ footer p {
 /* Gemeinsames Styling für alle Texte, die hereinfahren sollen */
 .slide-in {
     /* font-size: 1.9em; /* Beispielhafte Schriftgröße, passe sie nach Bedarf an */
-    opacity: 0; /* Initiale Sichtbarkeit auf 0 setzen */
+    opacity: 1; /* Initiale Sichtbarkeit auf 0 setzen */
     animation-fill-mode: forwards; /* Sicherstellen, dass die Animation bei 100% bleibt */
     animation-delay: 3s; /* Verzögerung bevor die Animation startet, z.B. 0.5 Sekunden */
-    opacity: 1; /* Sichtbarkeit wieder auf 1 setzen */
+    /* opacity: 1; /* Sichtbarkeit wieder auf 1 setzen */
+
+    font-family: 'Open Sans', sans-serif; /* Beibehaltung der aktuellen Schriftart */
+    font-size: 18px; /* Standard-Schriftgröße für den Fließtext */
+    color: #202020; /* Textfarbe */
+    margin-bottom: 20px; /* Abstand nach unten für jeden Absatz */
 }
 
 /* Definiere die Animation für das Hereinfahren von links */
 .a {
     animation: slideInFromLeft 5s ease-in-out; /* Wende die Animation auf den Text an, Dauer: 3 Sekunden */
-    font-size: 18px; /* Setzt die Schriftgröße des Logos auf 24 Pixel */
-    margin-bottom: 20px; /* NEU: Füge einen Abstand unter dem Text hinzu */
-    text-align: right; /* Zentriert den Text im Hauptinhalt */
+    font-size: 20px; /* Setzt die Schriftgröße des Logos auf 24 Pixel */
+    margin-bottom: 18px; /* NEU: Füge einen Abstand unter dem Text hinzu */
     font-style: italic; /* Macht den Text innerhalb eines Absatzes kursiv */
+    font-family: 'Open Sans', sans-serif;
+    /* color: #009c6c; /* Grüne Farbe passend zum Thema */
+    text-align: right; /* Zentrierter Text */
 }
 
 /* Definiere die Animation für das Hereinfahren von oben */
 .b {
     animation: slideInFromTop 4s ease-in-out; /* Wende die Animation auf den Text an, Dauer: 3 Sekunden */
-    font-size: 18px; /* Setzt die Schriftgröße des Logos auf 24 Pixel */
-    margin-bottom: 20px; /* Füge einen Abstand unter dem Text hinzu */
-    text-align: center; /* Zentriert den Text im Hauptinhalt */
+    margin-bottom: 18px; /* Füge einen Abstand unter dem Text hinzu */
     font-weight: bold; /* Macht den gesamten Text fett */
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px; /* Standard-Schriftgröße */
+    color: #555555; /* Etwas hellerer Grauton */
+    text-align: center; /* Linksbündiger Text */
 }
 
 .c {
     animation: slideInFromBottom 3s ease-in-out; /* Wende die Animation auf den Text an, Dauer: 3 Sekunden */
-    font-size: 18px; /* Setzt die Schriftgröße des Logos auf 24 Pixel */
-    margin-bottom: 20px; /* Füge einen Abstand unter dem Text hinzu */
-    text-align: left; /* Zentriert den Text im Hauptinhalt */
+    margin-bottom: 18px; /* Füge einen Abstand unter dem Text hinzu */
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px; /* Standard-Schriftgröße */
+    color: #555555; /* Etwas hellerer Grauton */
+    text-align: left; /* Linksbündiger Text */
 }
 
 .d {
     animation: slideInFromBottom 2s ease-in-out; /* Animation anwenden, Dauer: 3 Sekunden */
-    margin-bottom: 18px; /* Abstand unter dem Logo */
-    margin-bottom: 20px; /* Füge einen Abstand unter dem Text hinzu */
-    text-align: left; /* Zentriert den Text im Hauptinhalt */
+    margin-bottom: 18px; /* Füge einen Abstand unter dem Text hinzu */
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px; /* Standard-Schriftgröße */
+    color: #555555; /* Etwas hellerer Grauton */
+    text-align: left; /* Linksbündiger Text */
 }
 
 .e {
     animation: slideInFromTop 3s ease-in-out; /* Animation anwenden, Dauer: 3 Sekunden */
-    margin-bottom: 18px; /* Abstand unter dem Logo */
-    margin-bottom: 20px; /* Füge einen Abstand unter dem Text hinzu */
-    text-align: left; /* Zentriert den Text im Hauptinhalt */
+    margin-bottom: 18px; /* Füge einen Abstand unter dem Text hinzu */
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px; /* Standard-Schriftgröße */
+    color: #555555; /* Etwas hellerer Grauton */
+    text-align: left; /* Linksbündiger Text */
 }
 
 
@@ -374,6 +398,7 @@ footer p {
 }
 
 
+
 /*---------------------------------- Beiträge Stile ----------------------------------*/
 .posts {
     display: flex; /* Richten der Beiträge horizontal aus */
@@ -385,11 +410,11 @@ footer p {
 
 .post {
     display: flex; /* Macht den Beitrag zu einem flexiblen Container für Inhalt */
-    gap: 10px; /* Abstand zwischen den Elementen im Beitrag */
-    border: 1px solid #c2c2c2; /* Gibt dem Beitrag einen Rahmen */
+    gap: 3px; /* Abstand zwischen den Elementen im Beitrag */
+    border: 1px solid #009c6c; /* Gibt dem Beitrag einen Rahmen */
     border-radius: 8px; /* Macht die Ecken des Rahmens abgerundet */
     margin: 10px; /* Abstand zwischen den Beiträgen */
-    padding: 10px; /* Innenabstand innerhalb des Beitrags */
+    padding: 3px; /* Innenabstand innerhalb des Beitrags */
     width: 360px; /* Breite des Containers */
     height: 160px; /* Feste Höhe des Beitrags */
     max-width: 400px; /* Maximale Breite */
@@ -400,7 +425,6 @@ footer p {
     align-items: center; /* NEU: Zentriert das Bild und den Text horizontal */
     flex-direction: row; /* NEU: Anordnung der Kinder (Bild und Text) vertikal */
     justify-content: center; /* Zentriert den Inhalt vertikal */
-
 }
 
 
@@ -426,9 +450,7 @@ img {
 }
 
 .post img {
-    width: auto; /* Breite des Bildes */
-    /* max-width: 100%; /* Bild wird nicht breiter als der Container */
-    max-height: 150px; /* NEU: Maximale Höhe des Bildes, um sicherzustellen, dass es nicht zu groß wird */
+    width: 140px; /* Breite des Bildes */
     height: auto; /* Höhe des Bildes */
     display: block; /* Verwandelt das Bild in ein Blockelement */
     object-fit: contain; /* Das Bild wird so skaliert, dass es den gesamten verfügbaren Platz einnimmt, ohne verzerrt zu werden */
@@ -458,16 +480,23 @@ img {
 }
 
 .post-content h2 {
-    font-size: 14px; /* Schriftgröße der Überschrift */
-    margin-bottom: 5px; /* NEU: KLEINERER ABSTAND UNTER DER ÜBERSCHRIFT */
+    font-family: 'Open Sans', sans-serif; /* Beibehaltung der aktuellen Schriftart */
+    font-size: 20px; /* Ändere die Schriftgröße nach Belieben */
+    margin-bottom: 5px; /* Abstand unter der Überschrift */
+    font-weight: 600; /* Stärke der Schrift, z.B. fetter */
+    color: #009c6c; /* Ändere die Textfarbe */
 }
 
 .post-content p {
-    font-size: 13px; /* NEU: KLEINERE SCHRIFTGRÖSSE DES TEXTES */
+    font-family: 'Open Sans', sans-serif; /* Schriftart beibehalten */
+    font-size: 18px; /* Passe die Schriftgröße an */
+    color: #202020; /* Setze eine dunklere Farbe */
+    line-height: 1.6; /* Abstand zwischen den Zeilen */
+    margin-bottom: 15px; /* Abstand unter dem Absatz */
 }
 
 .nav-links a {
-    color: #AFB0B6; /* Setzt die Textfarbe der Links */
+    color: #009c6c; /* Setzt die Textfarbe der Links */
     text-decoration: none; /* Entfernt Unterstreichungen von den Links */
 }
 
@@ -487,7 +516,7 @@ a {
 
 
 
-/* Allgemeine Stile für den gesamten Blog */
+/* Allgemeine Stile für den gesamten Blogbeitrag Text */
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
 
 /* Allgemeine Stile */
@@ -552,7 +581,7 @@ a {
 
 /* Links */
 .blogbeitrag a {
-    color: #1a0dab;
+    color: #009c6c;
     text-decoration: none;
 }
 

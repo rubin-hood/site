@@ -1,103 +1,209 @@
+<?php
 
-
-<?php include 'layouts/header.php'; ?>
+include 'layouts/header.php'; ?>
 
 <main id="content">
 
-    
 
-        <div class="content">
+<div class="content">
           <p class="slide-in a">Der digitale Wald, in dem Kreativität und Technologie aufeinander treffen.</p>
           <p class="slide-in b">Hallo und herzlich willkommen!</p>
           <p class="slide-in c">Ich heiße Andreas, und ich habe diese Website ins Leben gerufen, um meine Leidenschaft für IT-Projekte zu präsentieren.</p>
           <p class="slide-in e">Diese Webseite wurde, abgesehen vom Domainnamen, komplett kostenlos erstellt. Sie wird auf Netlify gehostet, und der Code ist in meinem öffentlichen GitHub-Repository verfügbar.</p>
-          <p class="slide-in d">Wie der legendäre Held Robin Hood, der Gutes tat und die Welt auf seine Weise veränderte, möchte auch ich durch innovative Lösungen und kreative Ansätze einen positiven Beitrag leisten – aber eben in der Welt der IT.</p>
-          
-          
-          
-          <div class="slide-in b">
-    
-    
-         </div>
-          
-          <div class="slide-in e">
-    
-
-    
+          <p class="slide-in d">In der IT-Welt gibt es viele komplexe Lösungen und Wissen, das oft nur wenigen zugänglich ist. Rubin-Hood steht dafür, dieses Wissen aufzubrechen und verständlich für alle bereitzustellen – egal, ob du gerade erst anfängst oder ein erfahrener Profi bist. So wie Robin Hood die Macht und Ressourcen gerecht verteilte, zielt Rubin-Hood darauf ab, IT-Wissen frei und einfach zugänglich zu machen, damit jeder davon profitieren kann. Wie der legendäre Held Robin Hood, der Gutes tat und die Welt auf seine Weise veränderte, möchte auch ich durch innovative Lösungen und kreative Ansätze einen positiven Beitrag leisten – aber eben in der Welt der IT.</p>
           </div>
 
-    <section class="posts">
-    
 
-      <a href="articles/blogpost1.php">
-      <div class="post" style="animation-delay: 1s;">
-        <img src="images/virtualization-in-large-companies.jpg" alt="Beitragsbild 1" loading="lazy">
-          <div class="post-content">
-              <h2>Virtualisierung im Großunternehmen: Ein Leitfaden für eine effiziente IT-Infrastruktur</h2>
-              <p>In der modernen digitalen Ära ist eine leistungsfähige IT-Infrastruktur für Unternehmen unerlässlich. Besonders für Firmen mit etwa 1000 Mitarbeitern bietet die Virtualisierung enorme Vorteile. Aber wie funktioniert das Ganze? Lassen Sie uns einen Blick auf die wichtigsten Komponenten und deren Zusammenspiel werfen.</p> <!-- Beschreibung des ersten Beitrags -->
-          </div>
-      </div>
-      </a>
-
-
-    <a href="articles/blogpost2.php">
-        <div class="post" style="animation-delay: 3s;"> 
-          <img src="images/apply-security-patches-on-linux-windows-systems.jpg" alt="Beitragsbild 1" loading="lazy"> 
-            <div class="post-content">
-                <h2>Sicherheitspatches auf Linux/Windows-Systemen anwenden</h2>
-                <p>Der Schutz von IT-Systemen vor Angriffen und Schwachstellen ist eine der wichtigsten Aufgaben in der Systemadministration. Eine zentrale Rolle spielen dabei Sicherheitspatches, die regelmäßig installiert werden müssen, um die Abwehr gegen neue Bedrohungen zu stärken. Dieser Beitrag zeigt, wie man auf Linux- und Windows-Systemen am besten vorgeht, um sicherzustellen, dass Patches schnell und zuverlässig angewendet werden.</p> <!-- Beschreibung des ersten Beitrags -->
+          <div class="container">
+        <!-- Initial load animation section -->
+        <section class="content-section initial-content">
+            <div class="image-container slide-right">
+                <img src="images/bild1.jpg" alt="VM Setup Image">
             </div>
-        </div>
-        </a>
-    
-
-    <a href="articles/local-area-network.html">
-        <div class="post" style="animation-delay: 6s;"> 
-          <img src="images/local-area-network.jpg" alt="Beitragsbild 1" loading="lazy">
-            <div class="post-content">
-                <h2>Alles, was du über Local Area Networks (LAN) wissen musst</h2>
-                <p>Überall um uns herum finden wir heutzutage Netzwerke, die unser Leben prägen. Ob zu Hause, im Büro oder in Schulen – sie bilden das Rückgrat unserer digitalen Kommunikation. Ein besonders weit verbreitetes Netzwerk ist das Local Area Network, besser bekannt als LAN. Doch was verbirgt sich hinter diesem Begriff, und warum ist es so wichtig für unsere tägliche Arbeit? In diesem Artikel klären wir das!</p> <!-- Beschreibung des ersten Beitrags -->
+            <div class="text-container slide-up">
+                <h2>Einrichtung einer virtuellen Maschine mit Hyper-V</h2>
+                <p>In diesem Blogbeitrag werde ich erklären, wie du eine virtuelle Maschine (VM) mit Hyper-V erstellst...</p>
             </div>
-        </div>
-        </a>
-    
+        </section>
 
-    <a href="https://dein-link-hier.com">
-        <div class="post" style="animation-delay: 9s;"> 
-          <img src="logo.jpg" alt="Beitragsbild 1" loading="lazy">
-            <div class="post-content">
-                <h2>Beitragstitel 1</h2>
-                <p>Kurzbeschreibung des Beitrags 1. Klick für mehr Details.</p>
+
+
+
+        <!-- Lazy loaded sections -->
+        <section class="content-section lazy-content">
+            <div class="text-container slide-right">
+                <h2>Windows-Installation auf der VM</h2>
+                <p>Nach der Erstellung der VM folgt die Installation von Windows. Hier erfahren Sie die notwendigen Schritte...</p>
             </div>
-        </div>
-        </a>
-    
-
-    <a href="https://dein-link-hier.com">
-        <div class="post" style="animation-delay: 12s;"> 
-          <img src="logo.jpg" alt="Beitragsbild 1" loading="lazy">
-            <div class="post-content">
-                <h2>Beitragstitel 1</h2>
-                <p>Kurzbeschreibung des Beitrags 1. Klick für mehr Details.</p>
+            <div class="image-container slide-up">
+                <img data-src="images/bild1.jpg" alt="Windows Installation Image">
             </div>
-        </div>
-        </a>
-    
+        </section>
 
-    <a href="articles/local-area-network.html">
-        <div class="post" style="animation-delay: 15s;"> 
-          <img src="logo.jpg" alt="Beitragsbild 1" loading="lazy">
-            <div class="post-content">
-                <h2>Beitragstitel 1</h2>
-                <p>Kurzbeschreibung des Beitrags 1. Klick für mehr Details.</p>
+
+
+
+        <section class="content-section lazy-content">
+            <div class="image-container slide-right">
+                <img data-src="images/bild1.jpg" alt="Network Setup Image">
             </div>
-        </div>
-        </a>
-    
-    </section>
+            <div class="text-container slide-up">
+                <h2>Netzwerkkonfiguration</h2>
+                <p>Die richtige Netzwerkkonfiguration ist entscheidend für die Verwendung Ihrer VM...</p>
+            </div>
+        </section>
 
-    
+
+
+
+        <section class="content-section lazy-content">
+            <div class="text-container slide-right">
+                <h2>Remote Desktop einrichten</h2>
+                <p>Zum Schluss richten wir den Remote Desktop-Zugriff ein, um von überall auf die VM zugreifen zu können...</p>
+            </div>
+            <div class="image-container slide-up">
+                <img data-src="images/bild1.jpg" alt="Remote Desktop Image">
+            </div>
+        </section>
+
+
+
+
+        <section class="content-section lazy-content">
+            <div class="image-container slide-right">
+                <img data-src="images/bild1.jpg" alt="Network Setup Image">
+            </div>
+            <div class="text-container slide-up">
+                <h2>Netzwerkkonfiguration</h2>
+                <p>Die richtige Netzwerkkonfiguration ist entscheidend für die Verwendung Ihrer VM...</p>
+            </div>
+        </section>
+
+
+
+
+        <section class="content-section lazy-content">
+            <div class="text-container slide-right">
+                <h2>Remote Desktop einrichten</h2>
+                <p>Zum Schluss richten wir den Remote Desktop-Zugriff ein, um von überall auf die VM zugreifen zu können...</p>
+            </div>
+            <div class="image-container slide-up">
+                <img data-src="images/bild1.jpg" alt="Remote Desktop Image">
+            </div>
+        </section>
+
+
+
+        <section class="content-section lazy-content">
+            <div class="image-container slide-right">
+                <img data-src="images/bild1.jpg" alt="Network Setup Image">
+            </div>
+            <div class="text-container slide-up">
+                <h2>Netzwerkkonfiguration</h2>
+                <p>Die richtige Netzwerkkonfiguration ist entscheidend für die Verwendung Ihrer VM...</p>
+            </div>
+        </section>
+
+
+
+
+        <section class="content-section lazy-content">
+            <div class="text-container slide-right">
+                <h2>Remote Desktop einrichten</h2>
+                <p>Zum Schluss richten wir den Remote Desktop-Zugriff ein, um von überall auf die VM zugreifen zu können...</p>
+            </div>
+            <div class="image-container slide-up">
+                <img data-src="images/bild1.jpg" alt="Remote Desktop Image">
+            </div>
+        </section>
+
+
+
+        <section class="content-section lazy-content">
+            <div class="image-container slide-right">
+                <img data-src="images/bild1.jpg" alt="Network Setup Image">
+            </div>
+            <div class="text-container slide-up">
+                <h2>Netzwerkkonfiguration</h2>
+                <p>Die richtige Netzwerkkonfiguration ist entscheidend für die Verwendung Ihrer VM...</p>
+            </div>
+        </section>
+
+
+
+
+        <section class="content-section lazy-content">
+            <div class="text-container slide-right">
+                <h2>Remote Desktop einrichten</h2>
+                <p>Zum Schluss richten wir den Remote Desktop-Zugriff ein, um von überall auf die VM zugreifen zu können...</p>
+            </div>
+            <div class="image-container slide-up">
+                <img data-src="images/bild1.jpg" alt="Remote Desktop Image">
+            </div>
+        </section>
+
+
+
+
+        <section class="content-section lazy-content">
+            <div class="image-container slide-right">
+                <img data-src="images/bild1.jpg" alt="Network Setup Image">
+            </div>
+            <div class="text-container slide-up">
+                <h2>Netzwerkkonfiguration</h2>
+                <p>Die richtige Netzwerkkonfiguration ist entscheidend für die Verwendung Ihrer VM...</p>
+            </div>
+        </section>
+
+
+
+
+        <section class="content-section lazy-content">
+            <div class="text-container slide-right">
+                <h2>Remote Desktop einrichten</h2>
+                <p>Zum Schluss richten wir den Remote Desktop-Zugriff ein, um von überall auf die VM zugreifen zu können...</p>
+            </div>
+            <div class="image-container slide-up">
+                <img data-src="images/bild1.jpg" alt="Remote Desktop Image">
+            </div>
+        </section>
+
+
+
+        <section class="content-section lazy-content">
+            <div class="image-container slide-right">
+                <img data-src="images/bild1.jpg" alt="Network Setup Image">
+            </div>
+            <div class="text-container slide-up">
+                <h2>Netzwerkkonfiguration</h2>
+                <p>Die richtige Netzwerkkonfiguration ist entscheidend für die Verwendung Ihrer VM...</p>
+            </div>
+        </section>
+
+
+
+
+        <section class="content-section lazy-content">
+            <div class="text-container slide-right">
+                <h2>Remote Desktop einrichten</h2>
+                <p>Zum Schluss richten wir den Remote Desktop-Zugriff ein, um von überall auf die VM zugreifen zu können...</p>
+            </div>
+            <div class="image-container slide-up">
+                <img data-src="images/bild1.jpg" alt="Remote Desktop Image">
+            </div>
+        </section>
+
+
         </div> 
       </main>
 
+
+
 <?php include 'layouts/footer.php'; ?>
+
+
+
+
+
+
+

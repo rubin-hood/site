@@ -1,4 +1,8 @@
-<?php include '../layouts/header.php'; ?>
+<?php
+
+// Einbinden des Headers, nachdem die Header-Informationen gesendet wurden
+include '../layouts/header.php';
+?>
 
 <main id="content">
 <div class="content"> <!-- Start des Content-Bereichs -->

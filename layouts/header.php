@@ -1,3 +1,5 @@
+
+
 <!------------------------------------------ Dokumentstruktur ------------------------------------------>
 <!DOCTYPE html> <!-- Deklariert den Dokumenttyp als HTML5 -->
 <html lang="de"> <!-- Beginn des HTML-Dokuments und legt die Sprache auf Deutsch fest -->
@@ -5,8 +7,11 @@
     <meta charset="UTF-8"> <!-- Legt die Zeichenkodierung des Dokuments auf UTF-8 fest -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Setzt das Viewport-Tag für responsives Design, damit die Seite auf mobilen Geräten richtig angezeigt wird -->
     <title>Responsive Header</title> <!-- Definiert den Titel der Webseite, der im Browser-Tab angezeigt wird -->
-    <link rel="stylesheet" href="../resources/styles.css"> <!-- Verknüpft das externe Stylesheet (CSS-Datei) zur Gestaltung der Seite -->
+    <link rel="preload" href="../resources/styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="../resources/styles_inhalt.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <!-- <link rel="stylesheet" href="../resources/styles.css"> Verknüpft das externe Stylesheet (CSS-Datei) zur Gestaltung der Seite -->
     <script defer src="../resources/script.js"></script> <!-- Lädt das externe JavaScript mit der Datei "script.js" und führt es aus, nachdem das HTML-Dokument vollständig geladen wurde -->
+    <script defer src="../resources/script_inhalt.js"></script> <!-- Lädt das externe JavaScript mit der Datei "script.js" und führt es aus, nachdem das HTML-Dokument vollständig geladen wurde -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet"> <!-- Verlinkt die Font Awesome Bibliothek für die Verwendung von Icons -->
 </head>
 
@@ -15,7 +20,7 @@
     <!-- <a href="#" class="logo">Rubin</a> Das Logo der Webseite, das als Link zur Startseite dient -->
     <a href="../index.php" class="logo">
         <!-- <img src="image/logo.png" alt="Rubin Logo" class="logo-img"> -->
-        <img src="../logo/logo.png" alt="Rubin Logo" class="logo-img">
+        <img src="../images/rubin-hood3.png" alt="Rubin Logo" class="logo-img">
     </a>        
     <nav class="nav-links"> <!-- Navigationselement, das die Links zu den verschiedenen Seiten enthält -->
         <a href="../index.php">Home</a> <!-- Link zur Startseite -->
