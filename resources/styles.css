@@ -49,12 +49,17 @@ html {
 }
 
 .logo-img {
-    width: 80px; /* Breite des Logos */
+    width: 120px; /* Breite des Logos */
     height: auto; /* Höhe passt sich proportional zur Breite an */
-    margin-top: 10px; /* Fügt einen oberen Abstand von 20px hinzu */
+    margin-top: 40px; /* Fügt einen oberen Abstand von 20px hinzu */
     /*box-shadow: 0 2px 5px rgba(4,164,186); /* Fügt einen kleinen Schatten unter dem Header hinzu */
     z-index: 1100; /* Erhöhe den z-index */
+
+    display: block !important; /* Erzwinge die Anzeige des Logos */
+    opacity: 1 !important; /* Erzwinge volle Sichtbarkeit */
+    visibility: visible !important; /* Erzwinge Sichtbarkeit */
 }
+
 
 /* Kombinierter Hover-Effekt für Logo, Navigationslinks und Social Media Icons */
 .logo:hover,

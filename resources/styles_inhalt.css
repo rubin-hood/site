@@ -39,7 +39,7 @@ img {
     max-width: 100%;
     height: auto;
     opacity: 0;
-    transition: opacity 0.5s;
+    transition: opacity 1.5s;
 }
 
 img.loaded {
@@ -53,11 +53,11 @@ h2 {
 
 /* Initial content animations */
 .initial-content .slide-right {
-    animation: slideRight 1s ease-out forwards;
+    animation: slideRight 2s ease-out forwards;
 }
 
 .initial-content .slide-up {
-    animation: slideUp 1s ease-out forwards;
+    animation: slideUp 2s ease-out forwards;
 }
 
 .initial-content img {
@@ -67,7 +67,7 @@ h2 {
 /* Lazy content styles */
 .lazy-content {
     opacity: 0;
-    transition: opacity 0.5s;
+    transition: opacity 1.5s;
 }
 
 .lazy-content.visible {
@@ -83,11 +83,11 @@ h2 {
 }
 
 .lazy-content.visible .slide-right {
-    animation: slideRight 1s ease-out forwards;
+    animation: slideRight 2s ease-out forwards;
 }
 
 .lazy-content.visible .slide-up {
-    animation: slideUp 1s ease-out forwards;
+    animation: slideUp 2s ease-out forwards;
 }
 
 /* Keyframes */
