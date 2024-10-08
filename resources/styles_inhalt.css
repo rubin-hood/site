@@ -17,7 +17,7 @@ body {
     min-height: 10px; /* Setzt eine minimale Höhe von 300px */
     margin: 10px auto 0 auto; /* Setzt 200px nach oben und zentriert horizontal */
     padding: 10px; /* Fügt innenliegenden Abstand hinzu, um den Inhalt vom Rand abzusetzen */
-    background-color: #97d86c; /* Setzt die Hintergrundfarbe des Content-Bereichs auf weiß */
+    background-color: #F6F5F1; /* Setzt die Hintergrundfarbe des Content-Bereichs auf weiß */
     /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Fügt einen leichten Schatten hinzu, um den Bereich hervorzuheben */
     border-radius: 8px; /* Rundet die Ecken des Content-Bereichs ab */
 }
