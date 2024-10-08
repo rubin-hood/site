@@ -22,13 +22,31 @@ body {
     border-radius: 8px; /* Rundet die Ecken des Content-Bereichs ab */
 }
 
+/* Desktop-Layout (Standard) */
 .content-section {
     display: flex;
     align-items: center;
     margin-bottom: 20px;
     padding: 20px 0;
-    min-height: 20vh; /* Ensures sections are tall enough to trigger lazy loading */
+    min-height: 20vh;
 }
+
+/* Mobiles Layout */
+@media (max-width: 768px) {
+    .content-section {
+        flex-direction: column; /* Stapelt das Bild über den Text */
+    }
+
+    .image-container {
+        order: -1; /* Bild zuerst anzeigen */
+        padding: 10px; /* Weniger Padding für kleine Bildschirme */
+    }
+
+    .text-container {
+        padding: 10px; /* Weniger Padding für kleine Bildschirme */
+    }
+}
+
 
 .image-container, .text-container {
     flex: 1;
