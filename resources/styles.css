@@ -11,7 +11,7 @@ header {
     display: flex; /* Definiert einen flexiblen Container für den Header */
     justify-content: space-between; /* Verteilt die Inhalte im Header gleichmäßig mit Platz dazwischen */
     align-items: center; /* Zentriert die Elemente vertikal im Header */
-    padding: 15px 30px; /* Fügt Innenabstände von 15px oben/unten und 30px links/rechts hinzu */
+    padding: 40px 30px; /* Fügt Innenabstände von 15px oben/unten und 30px links/rechts hinzu */
     background-color: #F6F5F1; /* Setzt die Hintergrundfarbe des Headers auf ein dunkles Grau (#444) */
     /*background: linear-gradient(135deg, #9b111e, #b22034, #7d1128, #a10035); */
     /*background: linear-gradient(135deg, #a8e6cf, #57c785, #009c6c, #007f56);
