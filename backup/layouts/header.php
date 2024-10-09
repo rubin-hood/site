@@ -1,5 +1,5 @@
 
-<!------------------------------------------ Header ------------------------------------------>
+
 <!------------------------------------------ Dokumentstruktur ------------------------------------------>
 <!DOCTYPE html> <!-- Deklariert den Dokumenttyp als HTML5 -->
 <html lang="de"> <!-- Beginn des HTML-Dokuments und legt die Sprache auf Deutsch fest -->
@@ -57,4 +57,3 @@
         <a href="#" class="fa-brands fa-youtube"></a> <!-- Link zu YouTube mit dem entsprechenden Icon -->
     </div>
 </div>
-<!------------------------------------------ Ende des Header ------------------------------------------>

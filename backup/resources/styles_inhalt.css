@@ -4,40 +4,11 @@
     box-sizing: border-box;
 }
 
-
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
-
-
-
 body {
-    font-family: 'Open Sans', sans-serif; /* Setzt die Schriftart auf Arial oder eine serifenlose Ersatzschrift */
-    margin: 0; /* Entfernt den Standardabstand um den gesamten Seiteninhalt */
-    background-color: #F6F5F1; /* Setzt die Hintergrundfarbe der Seite auf ein helles Grau */
-    color: #202020; /* Setzt die Textfarbe auf ein dunkles Grau */
-
-    font-size: 18px;
-    /*line-height: 1.6;*/
-}
-
-
-/*---------------------------------- Hauptinhalt ----------------------------------*/
-/* Diese Sektion betrifft den Hauptteil der Webseite */
-main {
-    /* padding: 200px 200px 200px; /* Fügt einen Abstand von 50 Pixeln um den Hauptinhalt herum hinzu */
-    /* text-align: center; /* Zentriert den Text im Hauptinhalt */
-    padding-top: 100px; /* Höhe des Headers plus etwas zusätzlichen Platz */
-
-}
-
-.content { /* Stile für den zentralen Content-Bereich */
-    width: 100%; /* Breite des Inhaltsbereichs ist 80% der Seitenbreite */
-    max-width: 1200px; /* Maximale Breite von 1200px, um auf großen Bildschirmen nicht zu breit zu werden */
-    min-height: auto; /* Setzt eine minimale Höhe von 300px */
-    margin: 30px auto 0 auto; /* Setzt 200px nach oben und zentriert horizontal */
-    padding: 20px; /* Fügt innenliegenden Abstand hinzu, um den Inhalt vom Rand abzusetzen */
-    background-color: #F6F5F1; /* Setzt die Hintergrundfarbe des Content-Bereichs auf weiß */
-    /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Fügt einen leichten Schatten hinzu, um den Bereich hervorzuheben */
-    border-radius: 8px; /* Rundet die Ecken des Content-Bereichs ab */
+    font-family: 'Open Sans', sans-serif;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
 }
 
 .container {
@@ -83,7 +54,7 @@ main {
 }
 
 img {
-    max-width: 500px;
+    max-width: 100%;
     height: auto;
     opacity: 0;
     transition: opacity 1.5s;
@@ -303,8 +274,3 @@ h2 {
 .image-container:hover img {
     transform: scale(1.05);
 }
-
-.slide-right {
-    text-align: right;
-}
-
