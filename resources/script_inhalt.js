@@ -5,8 +5,8 @@ document.addEventListener('DOMContentLoaded', function() {
     
     const observerOptions = {
         root: null,
-        rootMargin: '0px 0px -10% 0px', // 10% des Containers müssen aus dem Sichtfeld sein, bevor die Animation ausgelöst wird
-        threshold: 1.0 // Setze den Schwellenwert auf 1.0 (100%)
+        rootMargin: '0px',
+        threshold: 0.1
     };
 
     // Observer for sections

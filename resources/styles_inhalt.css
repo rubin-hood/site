@@ -117,6 +117,7 @@ h2 {
 .lazy-content {
     opacity: 0;
     transition: opacity 1.5s;
+    will-change: opacity, transform; /* Optimierung für bessere Performance */
 }
 
 .lazy-content.visible {
@@ -164,7 +165,7 @@ h2 {
     /* font-size: 1.9em; /* Beispielhafte Schriftgröße, passe sie nach Bedarf an */
     opacity: 1; /* Initiale Sichtbarkeit auf 0 setzen */
     animation-fill-mode: forwards; /* Sicherstellen, dass die Animation bei 100% bleibt */
-    animation-delay: 3s; /* Verzögerung bevor die Animation startet, z.B. 0.5 Sekunden */
+    animation-delay: 0s; /* Verzögerung bevor die Animation startet, z.B. 0.5 Sekunden */
     /* opacity: 1; /* Sichtbarkeit wieder auf 1 setzen */
 
     font-family: 'Open Sans', sans-serif; /* Beibehaltung der aktuellen Schriftart */
@@ -228,49 +229,53 @@ h2 {
 
 
 /* Animationen */
-@keyframes slideInFromLeft {
+@@keyframes slideInFromLeft {
     0% {
-        transform: translateX(-10%); /* Startposition des Texts: komplett links außerhalb des Viewports */
+        transform: translate3d(-10%, 0, 0); /* Verwende translate3d für Hardwarebeschleunigung */
         opacity: 0;
     }
     100% {
-        transform: translateX(0); /* Endposition des Texts: an der richtigen Position */
+        transform: translate3d(0, 0, 0);
         opacity: 1;
     }
 }
 
 @keyframes slideInFromTop {
     0% {
-        transform: translateY(-100%); /* Startposition des Texts: komplett oben außerhalb des Viewports */
+        transform: translate3d(0, -100%, 0); /* Verwende translate3d für Hardwarebeschleunigung */
         opacity: 0;
     }
     100% {
-        transform: translateY(0); /* Endposition des Texts: an der richtigen Position */
+        transform: translate3d(0, 0, 0);
         opacity: 1;
     }
 }
 
 @keyframes slideInFromRight {
     0% {
-        transform: translateX(10%); /* Startposition des Texts: komplett rechts außerhalb des Viewports */
+        transform: translate3d(10%, 0, 0); /* Verwende translate3d für Hardwarebeschleunigung */
         opacity: 0;
     }
     100% {
-        transform: translateX(0); /* Endposition des Texts: an der richtigen Position */
+        transform: translate3d(0, 0, 0);
         opacity: 1;
     }
 }
 
 @keyframes slideInFromBottom {
     0% {
-        transform: translateY(100%); /* Startposition: unterhalb des sichtbaren Bereichs */
+        transform: translate3d(0, 100%, 0); /* Verwende translate3d für Hardwarebeschleunigung */
         opacity: 0;
     }
     100% {
-        transform: translateY(0); /* Endposition: an der richtigen Position */
+        transform: translate3d(0, 0, 0);
         opacity: 1;
     }
 }
+
+
+
+
 
 
 
