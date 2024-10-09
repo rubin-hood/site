@@ -96,6 +96,7 @@ img.loaded {
 h2 {
     margin-bottom: 15px;
     font-size: 24px;
+    color: #009c6c; /* Ändere die Textfarbe */
 }
 
 /* Initial content animations */
