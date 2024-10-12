@@ -36,7 +36,7 @@
     </nav>
     
     <div class="social-icons"> <!-- Container für die Social-Media-Icons -->
-        <a href="#" class="fa-brands fa-github"></a> <!-- Link zu GitHub mit dem entsprechenden Icon -->
+        <a href="https://github.com/rubin-hood" class="fa-brands fa-github"></a> <!-- Link zu GitHub mit dem entsprechenden Icon -->
         <a href="#" class="fa-brands fa-twitter"></a> <!-- Link zu Twitter mit dem entsprechenden Icon -->
         <a href="#" class="fa-brands fa-youtube"></a> <!-- Link zu YouTube mit dem entsprechenden Icon -->
     </div>

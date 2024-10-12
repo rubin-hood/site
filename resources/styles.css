@@ -224,7 +224,7 @@ footer {
     /*margin-top: 500px; /* Abstand zwischen dem Footer und dem Rest des Inhalts */
     padding-bottom: 20px; /* Abstand zum unteren Rand der Seite */
     /* HINZUGEFÜGT: STELLT SICHER, DASS DER FOOTER IMMER AM UNTEREN RAND BLEIBT */
-    flex-shrink: 0;
+    /* flex-shrink: 0;*/
     min-height: 300px;
 }
 

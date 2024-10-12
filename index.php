@@ -9,21 +9,21 @@ include 'layouts/header.php'; ?>
           <p class="slide-in a">Der digitale Wald, in dem Kreativität und Technologie aufeinander treffen.</p>
           <p class="slide-in b">Hallo und herzlich willkommen!</p>
           <p class="slide-in c">Ich heiße Andreas, und ich habe diese Website ins Leben gerufen, um meine Leidenschaft für IT-Projekte zu präsentieren.</p>
-          <p class="slide-in e">Diese Webseite wurde, abgesehen vom Domainnamen, komplett kostenlos erstellt. Sie wird auf Netlify gehostet, und der Code ist in meinem öffentlichen GitHub-Repository verfügbar.</p>
-          <p class="slide-in d">In der IT-Welt gibt es viele komplexe Lösungen und Wissen, das oft nur wenigen zugänglich ist. Rubin-Hood steht dafür, dieses Wissen aufzubrechen und verständlich für alle bereitzustellen – egal, ob du gerade erst anfängst oder ein erfahrener Profi bist. So wie Robin Hood die Macht und Ressourcen gerecht verteilte, zielt Rubin-Hood darauf ab, IT-Wissen frei und einfach zugänglich zu machen, damit jeder davon profitieren kann. Wie der legendäre Held Robin Hood, der Gutes tat und die Welt auf seine Weise veränderte, möchte auch ich durch innovative Lösungen und kreative Ansätze einen positiven Beitrag leisten – aber eben in der Welt der IT.</p>
+          <p class="slide-in e">Meine Webseite läuft auf einem Raspberry Pi 5 mit Ubuntu Server und nutzt PHP, um eine moderne und interaktive Web-Erfahrung zu bieten. Egal ob du Einsteiger bist oder fortgeschrittenes Wissen hast – der Quellcode ist auf GitHub frei zugänglich. So hast du die Möglichkeit, hinter die Kulissen zu blicken, dich weiterzubilden oder selbst zum Projekt beizutragen.</p>
+          <p class="slide-in d">In der IT-Welt gibt es viele komplexe Lösungen und Wissen, das oft nur wenigen zugänglich ist. Rubin-Hood steht dafür, dieses Wissen aufzubrechen und verständlich für alle bereitzustellen. So wie Robin Hood die Macht und Ressourcen gerecht verteilte, zielt Rubin-Hood darauf ab, IT-Wissen frei und einfach zugänglich zu machen, damit jeder davon profitieren kann. Wie der legendäre Held Robin Hood, der Gutes tat und die Welt auf seine Weise veränderte, möchte auch ich durch innovative Lösungen und kreative Ansätze einen positiven Beitrag leisten – aber eben in der Welt der IT.</p>
           </div>
 
 
           <div class="container">
     <!-- Initial load animation section -->
     <section class="content-section initial-content">
-        <a href="/blog/vm-setup-hyper-v" class="image-container slide-right">
+        <a href="articles/Hyper-V.php" class="image-container slide-right">
             <img src="images/bild1.jpg" alt="VM Setup Image">
         </a>
         <div class="text-container slide-up">
             <h2>Einrichtung einer virtuellen Maschine mit Hyper-V</h2>
-            <p>In diesem Blogbeitrag werde ich erklären, wie du eine virtuelle Maschine (VM) mit Hyper-V erstellst...</p>
-            <a href="/blog/vm-setup-hyper-v" class="read-more-btn">WEITER LESEN</a>
+            <p>In diesem Blogbeitrag werde ich erklären, wie du eine virtuelle Maschine (VM) mit Hyper-V erstellst, darauf Windows installierst und schließlich eine Verbindung über Remote Desktop von einem anderen Computer herstellst. Wir gehen Schritt für Schritt durch den Prozess, von der BIOS-Aktivierung bis zur erfolgreichen Remote Desktop-Verbindung.</p>
+            <a href="articles/Hyper-V.php" class="read-more-btn">WEITER LESEN</a>
         </div>
     </section>
 
