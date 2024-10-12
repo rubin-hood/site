@@ -18,7 +18,7 @@ include 'layouts/header.php'; ?>
     <!-- Initial load animation section -->
     <section class="content-section initial-content">
         <a href="articles/Hyper-V.php" class="image-container slide-right">
-            <img src="images/bild1.jpg" alt="VM Setup Image">
+            <img src="https://i.imgur.com/u4Kogk6.jpeg" alt="VM Setup Image">
         </a>
         <div class="text-container slide-up">
             <h2>Einrichtung einer virtuellen Maschine mit Hyper-V</h2>
@@ -32,25 +32,25 @@ include 'layouts/header.php'; ?>
     <!-- Lazy loaded sections -->
     <section class="content-section lazy-content">
         <div class="text-container slide-right">
-            <h2>Windows-Installation auf der VM</h2>
-            <p>Nach der Erstellung der VM folgt die Installation von Windows. Hier erfahren Sie die notwendigen Schritte...</p>
-            <a href="/blog/windows-installation" class="read-more-btn">WEITER LESEN</a>
+            <h2>Alles, was du über Local Area Networks (LAN) wissen musst</h2>
+            <p>Überall um uns herum finden wir heutzutage Netzwerke, die unser Leben prägen. Ob zu Hause, im Büro oder in Schulen – sie bilden das Rückgrat unserer digitalen Kommunikation. Ein besonders weit verbreitetes Netzwerk ist das Local Area Network , besser bekannt als LAN . Doch was verbirgt sich hinter diesem Begriff, und warum ist es so wichtig für unsere tägliche Arbeit? In diesem Artikel klären wir das!</p>
+            <a href="articles/local-area-network.php" class="read-more-btn">WEITER LESEN</a>
         </div>
-        <a href="/blog/windows-installation" class="image-container slide-up">
-            <img data-src="images/bild1.jpg" alt="Windows Installation Image">
+        <a href="articles/local-area-network.php" class="image-container slide-up">
+            <img data-src="https://i.imgur.com/mvHS2VP.png" alt="Windows Installation Image">
         </a>
     </section>
 
     <div class="divider"></div>
 
     <section class="content-section lazy-content">
-        <a href="/blog/network-setup" class="image-container slide-right">
-            <img data-src="images/bild1.jpg" alt="Network Setup Image">
+        <a href="articles/virtualization-in-large-companies.php" class="image-container slide-right">
+            <img data-src="https://i.imgur.com/Foo8KK9.jpeg" alt="Network Setup Image">
         </a>
         <div class="text-container slide-up">
-            <h2>Netzwerkkonfiguration</h2>
-            <p>Die richtige Netzwerkkonfiguration ist entscheidend für die Verwendung Ihrer VM...</p>
-            <a href="/blog/network-setup" class="read-more-btn">WEITER LESEN</a>
+            <h2>Virtualisierung im Großunternehmen: Ein Leitfaden für eine effiziente IT-Infrastruktur</h2>
+            <p>In der modernen digitalen Ära ist eine leistungsfähige IT-Infrastruktur für Unternehmen unerlässlich. Besonders für Firmen mit etwa 1000 Mitarbeitern bietet die Virtualisierung enorme Vorteile. Aber wie funktioniert das Ganze? Lassen Sie uns einen Blick auf die wichtigsten Komponenten und deren Zusammenspiel werfen.</p>
+            <a href="articles/virtualization-in-large-companies.php" class="read-more-btn">WEITER LESEN</a>
         </div>
     </section>
 
@@ -58,144 +58,20 @@ include 'layouts/header.php'; ?>
 
     <section class="content-section lazy-content">
         <div class="text-container slide-right">
-            <h2>Remote Desktop einrichten</h2>
-            <p>Zum Schluss richten wir den Remote Desktop-Zugriff ein, um von überall auf die VM zugreifen zu können...</p>
-            <a href="/blog/remote-desktop" class="read-more-btn">WEITER LESEN</a>
+            <h2>Sicherheitspatches auf Linux/Windows-Systemen anwenden</h2>
+            <p>Der Schutz von IT-Systemen vor Angriffen und Schwachstellen ist eine der wichtigsten Aufgaben in der Systemadministration. Eine zentrale Rolle spielen dabei Sicherheitspatches, die regelmäßig installiert werden müssen, um die Abwehr gegen neue Bedrohungen zu stärken. Dieser Beitrag zeigt, wie man auf Linux- und Windows-Systemen am besten vorgeht, um sicherzustellen, dass Patches schnell und zuverlässig angewendet werden.</p>
+            <a href="articles/apply-security-patches-on-linux-windows-systems.php" class="read-more-btn">WEITER LESEN</a>
         </div>
-        <a href="/blog/remote-desktop" class="image-container slide-up">
-            <img data-src="images/bild1.jpg" alt="Remote Desktop Image">
+        <a href="articles/apply-security-patches-on-linux-windows-systems.php" class="image-container slide-up">
+            <img data-src="https://i.imgur.com/KhkGmNV.jpeg" alt="Remote Desktop Image">
         </a>
     </section>
 
-    <div class="divider"></div>
 
-    <section class="content-section lazy-content">
-        <a href="/blog/vm-optimization" class="image-container slide-right">
-            <img data-src="images/bild1.jpg" alt="VM Optimization Image">
-        </a>
-        <div class="text-container slide-up">
-            <h2>VM-Optimierung für beste Leistung</h2>
-            <p>Lernen Sie, wie Sie Ihre virtuelle Maschine für optimale Leistung konfigurieren können...</p>
-            <a href="/blog/vm-optimization" class="read-more-btn">WEITER LESEN</a>
-        </div>
-    </section>
 
-    <div class="divider"></div>
 
-    <section class="content-section lazy-content">
-        <div class="text-container slide-right">
-            <h2>Backup-Strategien für VMs</h2>
-            <p>Sichern Sie Ihre virtuellen Maschinen effektiv mit diesen bewährten Backup-Methoden...</p>
-            <a href="/blog/vm-backup" class="read-more-btn">WEITER LESEN</a>
-        </div>
-        <a href="/blog/vm-backup" class="image-container slide-up">
-            <img data-src="images/bild1.jpg" alt="VM Backup Image">
-        </a>
-    </section>
 
-    <div class="divider"></div>
-
-    <section class="content-section lazy-content">
-        <a href="/blog/docker-integration" class="image-container slide-right">
-            <img data-src="images/bild1.jpg" alt="Docker Integration Image">
-        </a>
-        <div class="text-container slide-up">
-            <h2>Docker-Integration in Hyper-V</h2>
-            <p>Erfahren Sie, wie Sie Docker-Container in Ihrer Hyper-V-Umgebung einsetzen können...</p>
-            <a href="/blog/docker-integration" class="read-more-btn">WEITER LESEN</a>
-        </div>
-    </section>
-
-    <div class="divider"></div>
-
-    <section class="content-section lazy-content">
-        <div class="text-container slide-right">
-            <h2>Sicherheit in virtuellen Umgebungen</h2>
-            <p>Best Practices für die Absicherung Ihrer virtuellen Maschinen gegen Bedrohungen...</p>
-            <a href="/blog/vm-security" class="read-more-btn">WEITER LESEN</a>
-        </div>
-        <a href="/blog/vm-security" class="image-container slide-up">
-            <img data-src="images/bild1.jpg" alt="VM Security Image">
-        </a>
-    </section>
-
-    <div class="divider"></div>
-
-    <section class="content-section lazy-content">
-        <a href="/blog/nested-virtualization" class="image-container slide-right">
-            <img data-src="images/bild1.jpg" alt="Nested Virtualization Image">
-        </a>
-        <div class="text-container slide-up">
-            <h2>Verschachtelte Virtualisierung</h2>
-            <p>Entdecken Sie die Möglichkeiten von Nested Virtualization in Hyper-V...</p>
-            <a href="/blog/nested-virtualization" class="read-more-btn">WEITER LESEN</a>
-        </div>
-    </section>
-
-    <div class="divider"></div>
-
-    <section class="content-section lazy-content">
-        <div class="text-container slide-right">
-            <h2>Hochverfügbarkeit mit Hyper-V</h2>
-            <p>Implementieren Sie Hochverfügbarkeitslösungen für Ihre virtuellen Maschinen...</p>
-            <a href="/blog/high-availability" class="read-more-btn">WEITER LESEN</a>
-        </div>
-        <a href="/blog/high-availability" class="image-container slide-up">
-            <img data-src="images/bild1.jpg" alt="High Availability Image">
-        </a>
-    </section>
-
-    <div class="divider"></div>
-
-    <section class="content-section lazy-content">
-        <a href="/blog/vm-migration" class="image-container slide-right">
-            <img data-src="images/bild1.jpg" alt="VM Migration Image">
-        </a>
-        <div class="text-container slide-up">
-            <h2>VM-Migration leicht gemacht</h2>
-            <p>Lernen Sie verschiedene Methoden kennen, um VMs zwischen Hosts zu migrieren...</p>
-            <a href="/blog/vm-migration" class="read-more-btn">WEITER LESEN</a>
-        </div>
-    </section>
-
-    <div class="divider"></div>
-
-    <section class="content-section lazy-content">
-        <div class="text-container slide-right">
-            <h2>Ressourcenmanagement in Hyper-V</h2>
-            <p>Optimieren Sie die Ressourcenzuweisung für Ihre virtuellen Maschinen...</p>
-            <a href="/blog/resource-management" class="read-more-btn">WEITER LESEN</a>
-        </div>
-        <a href="/blog/resource-management" class="image-container slide-up">
-            <img data-src="images/bild1.jpg" alt="Resource Management Image">
-        </a>
-    </section>
-
-    <div class="divider"></div>
-
-    <section class="content-section lazy-content">
-        <a href="/blog/troubleshooting" class="image-container slide-right">
-            <img data-src="images/bild1.jpg" alt="Troubleshooting Image">
-        </a>
-        <div class="text-container slide-up">
-            <h2>Fehlerbehebung in Hyper-V</h2>
-            <p>Häufige Probleme und deren Lösungen in Hyper-V-Umgebungen...</p>
-            <a href="/blog/troubleshooting" class="read-more-btn">WEITER LESEN</a>
-        </div>
-    </section>
-
-    <div class="divider"></div>
-
-    <section class="content-section lazy-content">
-        <div class="text-container slide-right">
-            <h2>Automatisierung mit PowerShell</h2>
-            <p>Nutzen Sie PowerShell für die Automatisierung von Hyper-V-Aufgaben...</p>
-            <a href="/blog/powershell-automation" class="read-more-btn">WEITER LESEN</a>
-        </div>
-        <a href="/blog/powershell-automation" class="image-container slide-up">
-            <img data-src="images/bild1.jpg" alt="PowerShell Automation Image">
-        </a>
-    </section>
+    
 </div>
 
         </div> 

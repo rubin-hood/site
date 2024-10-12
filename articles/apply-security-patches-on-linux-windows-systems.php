@@ -19,7 +19,7 @@ include '../layouts/header.php';
         $Parsedown = new Parsedown();
 
         // Lese den Inhalt der Markdown-Datei (blogpost1.md befindet sich im selben Verzeichnis wie dieses PHP-Skript)
-        $markdownContent = file_get_contents('local-area-network.md');
+        $markdownContent = file_get_contents('apply-security-patches-on-linux-windows-systems.md');
 
         // Wandle den Markdown-Inhalt in HTML um und gib ihn aus
         echo $Parsedown->text($markdownContent);

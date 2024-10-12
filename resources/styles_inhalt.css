@@ -91,7 +91,7 @@ img {
     width: 100%;
     max-width: 500px;
     height: auto;
-    opacity: 0;
+    opacity: 1;
     transition: opacity 1.5s;
 }
 
@@ -314,6 +314,7 @@ h2 {
 
 .image-container img {
     transition: transform 0.3s ease;
+    border-radius: 7px;
 }
 
 .image-container:hover img {

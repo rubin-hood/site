@@ -1,119 +1,37 @@
-# Einrichtung einer virtuellen Maschine mit Hyper-V und Remote Desktop-Verbindung
+# Alles, was du über Local Area Networks (LAN) wissen musst
 
-!(https://i.imgur.com/ccKf4CM.png)
+![1728757960913](https://i.imgur.com/JxukbK8.png)
 
-In diesem Blogbeitrag werde ich erklären, wie du eine  **virtuelle Maschine (VM)**  mit  **Hyper-V**  erstellst, darauf  **Windows installierst**  und schließlich eine Verbindung über  **Remote Desktop**  von einem anderen Computer herstellst. Wir gehen Schritt für Schritt durch den Prozess, von der BIOS-Aktivierung bis zur erfolgreichen Remote Desktop-Verbindung.
+Überall um uns herum finden wir heutzutage Netzwerke, die unser Leben prägen. Ob zu Hause, im Büro oder in Schulen – sie bilden das Rückgrat unserer digitalen Kommunikation. Ein besonders weit verbreitetes Netzwerk ist das  **Local Area Network** , besser bekannt als  **LAN** . Doch was verbirgt sich hinter diesem Begriff, und warum ist es so wichtig für unsere tägliche Arbeit? In diesem Artikel klären wir das!
 
-## Voraussetzungen
+## Was ist ein Local Area Network (LAN)?
 
-- Ein PC mit  **Windows 10 Pro**  oder  **Windows 11 Pro**, auf dem  **Hyper-V**  installiert ist.
-- Ein Windows-Installationsabbild (**ISO-Datei**), um Windows in der VM zu installieren.
-- Eine funktionierende Netzwerkverbindung zwischen deinem Host-PC (dem Computer, auf dem Hyper-V läuft) und dem Computer, von dem du per Remote Desktop zugreifen möchtest.
+Ein **Local Area Network (LAN)** ist ein Netzwerk, das eine begrenzte räumliche Ausdehnung hat. Häufig umfasst es ein einzelnes Gebäude oder mehrere nahegelegene Gebäude, wie z. B. Büros, Schulen oder Privathaushalte. Die Hauptaufgabe eines LANs ist es, Computer und andere Geräte miteinander zu verbinden, sodass sie Daten und Ressourcen wie Drucker oder Internetverbindungen gemeinsam nutzen können.
 
-## 1. Aktivierung von Hyper-V im BIOS**
+## Die Funktionsweise eines LANs
 
-Bevor wir mit der Installation beginnen, müssen wir sicherstellen, dass die  **Virtualisierung**  im BIOS deines PCs aktiviert ist. Dazu:
+Ein LAN funktioniert über spezielle Hardwarekomponenten wie  **Switches** , **Router** und  **Netzwerkkabel** . Die Kommunikation zwischen den angeschlossenen Geräten erfolgt oft über  **Ethernet** , eine weit verbreitete Technologie, die die Datenübertragung in einem lokalen Netzwerk ermöglicht.
 
-1. **Starte den PC neu**  und rufe das BIOS auf (meist durch Drücken von  **F2**  oder  **Entf**  beim Start).
-2. Suche die Option für die  **Virtualisierung**  (meist „Intel VT“ oder „SVM-Modus“ genannt, je nach Prozessor) und stelle sicher, dass sie aktiviert ist.
-3. Speichere die Änderungen und starte den PC neu.
+In einem typischen LAN sind die Geräte direkt miteinander verbunden, entweder über Kabel (kabelgebundenes LAN) oder drahtlos (WLAN). Die kabelgebundene Variante bietet oft höhere Geschwindigkeit und Stabilität, während WLAN flexibler ist, da sich die Nutzer frei bewegen können, solange sie sich im Empfangsbereich des Netzwerks befinden.
 
-![Alternativtext](https://i.imgur.com/1OjQebn.jpeg)
+## Die Vorteile eines LANs
 
-## 2. Hyper-V unter Windows aktivieren
+![1728757960913](image/local-area-network/1728757960913.png)
 
-Wenn Hyper-V nicht bereits aktiviert ist, kannst du dies folgendermaßen tun:
+Geschwindigkeit und Zuverlässigkeit sind große Stärken eines LANs. Da die Entfernung zwischen den Geräten in einem LAN relativ gering ist, sind die Übertragungsgeschwindigkeiten oft höher im Vergleich zu Weitverkehrsnetzwerken (WAN). Moderne LANs können Datenübertragungsraten von bis zu 10 Gbit/s erreichen, was besonders für datenintensive Anwendungen wie Video-Streaming oder große Dateiübertragungen nützlich ist.
 
-Öffne das Startmenü und suche nach Windows-Features aktivieren oder deaktivieren.
-Scrolle herunter und aktiviere den Haken bei Hyper-V.
-Klicke auf OK und starte den PC neu.
+Ein weiterer Vorteil ist die Kosteneffizienz. Die Installation und Wartung eines LANs ist im Vergleich zu größeren Netzwerken relativ kostengünstig, da weniger komplexe Infrastruktur erforderlich ist. Besonders für kleinere Unternehmen oder Schulen bietet sich ein LAN daher als praktische Lösung an.
 
-![Alternativtext](https://i.imgur.com/OHsInTX.png)
+Auch in puncto Sicherheit bietet ein LAN Vorteile. Da es auf ein bestimmtes geografisches Gebiet begrenzt ist, kann es leichter überwacht und geschützt werden. Administratoren können den Zugang zu den Netzwerken gezielt steuern und absichern.
 
-## 3. Erstellen einer virtuellen Maschine**
+## Einsatzgebiete von LANs
 
-Nun ist Hyper-V bereit, und wir können eine virtuelle Maschine erstellen.
+LANs sind überall dort zu finden, wo viele Geräte miteinander verbunden werden müssen. In Büros nutzen Mitarbeiter häufig gemeinsame Ressourcen wie Drucker, Server und Internetverbindungen. In Schulen greifen Schüler und Lehrer auf gemeinsame Datenbanken, Lernplattformen und Drucker zu. In Privathaushalten sind oft Fernseher, Smartphones, Laptops und Smart-Home-Geräte über ein Heimnetzwerk verbunden.
 
-1. Öffne den  **Hyper-V Manager**  (einfach über die Windows-Suche eingeben).
-2. Klicke rechts auf deinen Computernamen und wähle  **Neu**  >  **Virtueller Computer**  aus.
-3. Gib der virtuellen Maschine einen Namen (z. B. „Windows 11 VM“) und wähle einen Speicherort für die VM.
-4. Wähle als  **Generation**  die  **Generation 2**  aus.
-5. Weise der VM genügend  **Arbeitsspeicher (RAM)**  zu (z. B. 4096 MB für ein flüssiges Windows-Erlebnis).
-6. Erstelle einen  **virtuellen Switch**  (falls noch nicht vorhanden), um die VM mit dem Netzwerk zu verbinden:
+## Unterschiede zu anderen Netzwerken
 
-- Gehe zu  **Hyper-V Manager**  >  **Manager für virtuelle Switches**  und erstelle einen  **externen Switch**, der deinen PC mit dem Netzwerk verbindet.
+Während das LAN lokal begrenzt ist, gibt es andere Netzwerktypen, die größere Entfernungen überbrücken. Ein **Wide Area Network (WAN)** verbindet Netzwerke über große geografische Entfernungen, oft auch international. Ein bekanntes Beispiel ist das Internet. **Metropolitan Area Networks (MANs)** hingegen decken größere Stadtgebiete ab und verbinden LANs miteinander.
 
-8. Weise der VM mindestens 20 GB  **Speicherplatz**  zu, indem du eine virtuelle Festplatte erstellst.
-9. **Installationsmedium auswählen**:
+## Herausforderungen und Entwicklungen
 
-- Wähle die Option „Installationsmedium“ und verweise auf die heruntergeladene  **Windows-ISO-Datei**.
-
-11. Klicke auf  **Fertigstellen**, um die VM zu erstellen.
-
-![Alternativtext](https://i.imgur.com/OgaLL9T.png)
-![Alternativtext](https://i.imgur.com/igUhDj5.png)
-![Alternativtext](https://i.imgur.com/bDF95zj.png)
-![Alternativtext](https://i.imgur.com/nDmqw38.png)
-![Alternativtext](https://i.imgur.com/0Nx6bPY.png)
-
-## 4. Windows in der virtuellen Maschine installieren**
-
-Jetzt ist die VM erstellt, und wir können mit der  **Windows-Installation**  fortfahren.
-
-1. Starte die VM, indem du sie im  **Hyper-V Manager**  auswählst und auf  **Verbinden**  klickst.
-2. Die VM sollte von der Windows-ISO-Datei booten.
-3. Folge den  **Installationsanweisungen**, um Windows wie gewohnt zu installieren (Sprache auswählen, Partition formatieren, etc.).
-4. Gib deine  **Windows-Lizenz**  ein (falls vorhanden) oder installiere Windows ohne Lizenzschlüssel.
-5. Warte, bis die Installation abgeschlossen ist, und richte dein Konto ein.
-
-## 5. Netzwerkzugriff konfigurieren**
-
-Sobald Windows in der VM installiert ist, solltest du sicherstellen, dass die VM Zugriff auf das Netzwerk hat:
-
-1. Öffne die  **Eingabeaufforderung**  (CMD) in der VM und gib ipconfig ein, um die  **IP-Adresse**  der VM anzuzeigen.
-
-- Die IP-Adresse sollte im Bereich deines lokalen Netzwerks (z. B.  **192.168.x.x**) liegen, wenn du einen externen Switch verwendest.
-
-3. Stelle sicher, dass die VM über den externen Switch mit deinem Netzwerk verbunden ist.
-
-![Alternativtext](https://i.imgur.com/me6JMS5.png)
-![Alternativtext](https://i.imgur.com/dZD41ct.png)
-
-## 6. Remote Desktop in der VM aktivieren**
-
-Nun müssen wir den  **Remotezugriff**  auf die VM aktivieren, damit wir von einem anderen PC darauf zugreifen können.
-
-1. Öffne die  **Einstellungen**  in der VM.
-2. Gehe zu  **System**  >  **Remote Desktop**.
-3. Aktiviere die Option  **Remote Desktop aktivieren**.
-4. Notiere dir die  **IP-Adresse**  der VM, die du später für den Remotezugriff benötigst.
-
-## 7. Firewall-Einstellungen anpassen**
-
-Um sicherzustellen, dass die  **Windows-Firewall**  den Remotezugriff nicht blockiert:
-
-1. Gehe zu  **Windows Defender Firewall**  in der VM.
-2. Wähle  **App durch Firewall zulassen**  und stelle sicher, dass  **Remote Desktop**  aktiviert ist (sowohl für private als auch für öffentliche Netzwerke).
-
-![Alternativtext](https://i.imgur.com/4K0Um1t.png)
-![Alternativtext](https://i.imgur.com/WPQfMNa.png)
-![Alternativtext](https://i.imgur.com/ociduui.png)
-
-## 8. Verbindung über Remote Desktop herstellen**
-
-Nun kannst du von einem anderen Computer aus per  **Remote Desktop**  auf die VM zugreifen:
-
-1. Öffne auf einem anderen PC den  **Remote Desktop Client**  (drücke  **Windows + R**, gib mstsc ein und drücke  **Enter**).
-2. Gib die  **IP-Adresse der VM**  ein (z. B.  **192.168.178.x**).
-3. Gib die  **Anmeldeinformationen**  der VM ein (Benutzername im Format PC-Name\Benutzername und das Passwort).
-4. Klicke auf  **Verbinden**.
-
-Wenn alles richtig konfiguriert ist, solltest du nun Zugriff auf die VM haben und sie wie einen normalen PC verwenden können!
-
-![Alternativtext](https://i.imgur.com/u4Kogk6.jpeg)
-![Alternativtext](https://i.imgur.com/tEMs8rt.png)
-![Alternativtext](https://i.imgur.com/KXq6P0J.png)
-
-Die Erstellung einer virtuellen Maschine mit  **Hyper-V**  und der Zugriff per  **Remote Desktop**  ist eine großartige Möglichkeit, um virtuelle Umgebungen zu testen und zu nutzen. Mit diesen Schritten kannst du sicherstellen, dass die VM korrekt eingerichtet ist und du von überall in deinem Netzwerk darauf zugreifen kannst.
-
-Falls du auf Probleme stößt, überprüfe die Netzwerkeinstellungen und stelle sicher, dass der Remotezugriff korrekt aktiviert ist.
+Mit der Zunahme drahtloser Technologien wie **WLAN** und **5G** stehen LANs vor neuen Herausforderungen. Drahtlose Verbindungen bieten zwar Flexibilität, sind aber manchmal anfälliger für Störungen oder Sicherheitsprobleme. Dennoch bleiben kabelgebundene LANs in vielen Bereichen die bevorzugte Lösung, insbesondere dort, wo Geschwindigkeit und Stabilität entscheidend sind.
