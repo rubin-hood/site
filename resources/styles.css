@@ -223,7 +223,7 @@ html {
 footer {
     background-color: #F6F5F1; /* Setzt die Hintergrundfarbe des Fußbereichs auf Weiß */
     color: #5a5a5a; /* Setzt die Schriftfarbe */
-    padding: 100px; /* Fügt einen Innenabstand von 20 Pixeln im Fußbereich hinzu */
+    padding: 50px; /* Fügt einen Innenabstand von 20 Pixeln im Fußbereich hinzu */
     text-align: center; /* Zentriert den Text im Fußbereich */
     /* box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Fügt einen kleinen Schatten oberhalb des Fußbereichs hinzu */
     display: flex; /* Macht den Fußbereich zu einem flexiblen Layout */
@@ -231,7 +231,7 @@ footer {
     position: relative; /* Erlaubt die Positionierung von Elementen innerhalb des Footers */
     flex-direction: column; /* Ordnet die Elemente im Footer vertikal an */
     align-items: center; /* Zentriert die Elemente im Footer horizontal */
-    gap: 10px; /* Fügt einen Abstand von 10px zwischen den Flex-Elementen hinzu */
+    gap: 0px; /* Fügt einen Abstand von 10px zwischen den Flex-Elementen hinzu */
 }
 
 footer p {

@@ -54,7 +54,7 @@ main {
 /* Desktop-Layout (Standard) */
 .content-section {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     margin-bottom: 20px;
     padding: 20px 0;
     min-height: 20vh;
@@ -215,7 +215,7 @@ h2 {
 }
 
 .e {
-    animation: slideInFromTop 3s ease-in-out; /* Animation anwenden, Dauer: 3 Sekunden */
+    animation: slideInFromLeft 3s ease-in-out; /* Animation anwenden, Dauer: 3 Sekunden */
     margin-bottom: 18px; /* Füge einen Abstand unter dem Text hinzu */
     font-family: 'Open Sans', sans-serif;
     font-size: 18px; /* Standard-Schriftgröße */
@@ -315,3 +315,14 @@ h2 {
     text-align: right;
 }
 
+
+
+
+
+.divider {
+    width: 100%;
+    max-width: 1200px;
+    height: 1px;
+    background-color: #e0e0e0; /* Farbe der Trennlinie */
+    margin: 20px auto; /* Abstand nach oben und unten */
+}

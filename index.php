@@ -27,6 +27,8 @@ include 'layouts/header.php'; ?>
         </div>
     </section>
 
+    <div class="divider"></div>
+
     <!-- Lazy loaded sections -->
     <section class="content-section lazy-content">
         <div class="text-container slide-right">
@@ -39,6 +41,8 @@ include 'layouts/header.php'; ?>
         </a>
     </section>
 
+    <div class="divider"></div>
+
     <section class="content-section lazy-content">
         <a href="/blog/network-setup" class="image-container slide-right">
             <img data-src="images/bild1.jpg" alt="Network Setup Image">
@@ -49,6 +53,8 @@ include 'layouts/header.php'; ?>
             <a href="/blog/network-setup" class="read-more-btn">WEITER LESEN</a>
         </div>
     </section>
+
+    <div class="divider"></div>
 
     <section class="content-section lazy-content">
         <div class="text-container slide-right">
@@ -61,6 +67,8 @@ include 'layouts/header.php'; ?>
         </a>
     </section>
 
+    <div class="divider"></div>
+
     <section class="content-section lazy-content">
         <a href="/blog/vm-optimization" class="image-container slide-right">
             <img data-src="images/bild1.jpg" alt="VM Optimization Image">
@@ -71,6 +79,8 @@ include 'layouts/header.php'; ?>
             <a href="/blog/vm-optimization" class="read-more-btn">WEITER LESEN</a>
         </div>
     </section>
+
+    <div class="divider"></div>
 
     <section class="content-section lazy-content">
         <div class="text-container slide-right">
@@ -83,6 +93,8 @@ include 'layouts/header.php'; ?>
         </a>
     </section>
 
+    <div class="divider"></div>
+
     <section class="content-section lazy-content">
         <a href="/blog/docker-integration" class="image-container slide-right">
             <img data-src="images/bild1.jpg" alt="Docker Integration Image">
@@ -93,6 +105,8 @@ include 'layouts/header.php'; ?>
             <a href="/blog/docker-integration" class="read-more-btn">WEITER LESEN</a>
         </div>
     </section>
+
+    <div class="divider"></div>
 
     <section class="content-section lazy-content">
         <div class="text-container slide-right">
@@ -105,6 +119,8 @@ include 'layouts/header.php'; ?>
         </a>
     </section>
 
+    <div class="divider"></div>
+
     <section class="content-section lazy-content">
         <a href="/blog/nested-virtualization" class="image-container slide-right">
             <img data-src="images/bild1.jpg" alt="Nested Virtualization Image">
@@ -115,6 +131,8 @@ include 'layouts/header.php'; ?>
             <a href="/blog/nested-virtualization" class="read-more-btn">WEITER LESEN</a>
         </div>
     </section>
+
+    <div class="divider"></div>
 
     <section class="content-section lazy-content">
         <div class="text-container slide-right">
@@ -127,6 +145,8 @@ include 'layouts/header.php'; ?>
         </a>
     </section>
 
+    <div class="divider"></div>
+
     <section class="content-section lazy-content">
         <a href="/blog/vm-migration" class="image-container slide-right">
             <img data-src="images/bild1.jpg" alt="VM Migration Image">
@@ -137,6 +157,8 @@ include 'layouts/header.php'; ?>
             <a href="/blog/vm-migration" class="read-more-btn">WEITER LESEN</a>
         </div>
     </section>
+
+    <div class="divider"></div>
 
     <section class="content-section lazy-content">
         <div class="text-container slide-right">
@@ -149,6 +171,8 @@ include 'layouts/header.php'; ?>
         </a>
     </section>
 
+    <div class="divider"></div>
+
     <section class="content-section lazy-content">
         <a href="/blog/troubleshooting" class="image-container slide-right">
             <img data-src="images/bild1.jpg" alt="Troubleshooting Image">
@@ -159,6 +183,8 @@ include 'layouts/header.php'; ?>
             <a href="/blog/troubleshooting" class="read-more-btn">WEITER LESEN</a>
         </div>
     </section>
+
+    <div class="divider"></div>
 
     <section class="content-section lazy-content">
         <div class="text-container slide-right">

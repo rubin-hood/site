@@ -24,8 +24,8 @@
     </a>        
     <nav class="nav-links"> <!-- Navigationselement, das die Links zu den verschiedenen Seiten enthält -->
         <a href="../index.php">Home</a> <!-- Link zur Startseite -->
-        <a href="../navigation/about.php">Über uns</a> <!-- Link zur "Über uns"-Seite -->
-        <a href="../navigation/services.php">Dienste</a> <!-- Link zur Seite mit den angebotenen Diensten -->
+        <a href="../navigation/about.php">Über mich</a> <!-- Link zur "Über uns"-Seite -->
+        <a href="../navigation/services.php">Meine Projekte</a> <!-- Link zur Seite mit den angebotenen Diensten -->
         <a href="../navigation/contact.php">Kontakt</a> <!-- Link zur Kontaktseite -->
     </nav>
     
@@ -46,8 +46,8 @@
     <span class="close-menu">&times;</span> <!-- Schließen-Symbol -->
     <nav> <!-- Navigationselement für das mobile Menü -->
         <a href="../index.php">Home</a> <!-- Link zur Startseite -->
-        <a href="../about.php">Über uns</a> <!-- Link zur "Über uns"-Seite -->
-        <a href="../services.php">Dienste</a> <!-- Link zur Seite mit den angebotenen Diensten -->
+        <a href="../navigation/about.php">Über mich</a> <!-- Link zur "Über uns"-Seite -->
+        <a href="../services.php">Meine Projekte</a> <!-- Link zur Seite mit den angebotenen Diensten -->
         <a href="../contact.php">Kontakt</a>
         <!-- <a href="#">Kontakt</a> -->
     </nav>
