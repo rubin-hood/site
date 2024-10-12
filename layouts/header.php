@@ -31,7 +31,7 @@
     <nav class="nav-links"> <!-- Navigationselement, das die Links zu den verschiedenen Seiten enthält -->
         <a href="../index.php">Home</a> <!-- Link zur Startseite -->
         <a href="../navigation/about.php">Über mich</a> <!-- Link zur "Über uns"-Seite -->
-        <a href="../navigation/services.php">Meine Projekte</a> <!-- Link zur Seite mit den angebotenen Diensten -->
+        <a href="../navigation/projects.php">Meine Projekte</a> <!-- Link zur Seite mit den angebotenen Diensten -->
         <a href="../navigation/contact.php">Kontakt</a> <!-- Link zur Kontaktseite -->
     </nav>
     
@@ -53,12 +53,12 @@
     <nav> <!-- Navigationselement für das mobile Menü -->
         <a href="../index.php">Home</a> <!-- Link zur Startseite -->
         <a href="../navigation/about.php">Über mich</a> <!-- Link zur "Über uns"-Seite -->
-        <a href="../services.php">Meine Projekte</a> <!-- Link zur Seite mit den angebotenen Diensten -->
-        <a href="../contact.php">Kontakt</a>
+        <a href="../navigation/projects.php">Meine Projekte</a> <!-- Link zur Seite mit den angebotenen Diensten -->
+        <a href="../navigation/contact.php">Kontakt</a>
         <!-- <a href="#">Kontakt</a> -->
     </nav>
     <div class="mobile-social-icons"> <!-- Container für die Social-Media-Icons im mobilen Menü -->
-        <a href="#" class="fa-brands fa-github"></a> <!-- Link zu GitHub mit dem entsprechenden Icon -->
+        <a href="https://github.com/rubin-hood" class="fa-brands fa-github"></a> <!-- Link zu GitHub mit dem entsprechenden Icon -->
         <a href="#" class="fa-brands fa-twitter"></a> <!-- Link zu Twitter mit dem entsprechenden Icon -->
         <a href="#" class="fa-brands fa-youtube"></a> <!-- Link zu YouTube mit dem entsprechenden Icon -->
     </div>
