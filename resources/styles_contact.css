@@ -61,9 +61,10 @@ input[type="submit"]:hover {
     margin: 20px;
 }
 
-/* Nachricht nach dem Absenden */
+/* Nachricht nach dem Absenden
 p {
     font-size: 18px;
-    color: #202020; /* Grüner Text */
-    text-align: center;
+    color: #202020; /* Grüner Text
+    text-align: left;
 }
+*/

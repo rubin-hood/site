@@ -7,9 +7,14 @@
     <meta charset="UTF-8"> <!-- Legt die Zeichenkodierung des Dokuments auf UTF-8 fest -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Setzt das Viewport-Tag für responsives Design, damit die Seite auf mobilen Geräten richtig angezeigt wird -->
     <title>Responsive Header</title> <!-- Definiert den Titel der Webseite, der im Browser-Tab angezeigt wird -->
-    <link rel="preload" href="../resources/styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <link rel="preload" href="../resources/styles_contact.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <link rel="preload" href="../resources/styles_inhalt.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="stylesheet" href="../resources/styles.css">
+    <link rel="stylesheet" href="../resources/styles_contact.css">
+    <link rel="stylesheet" href="../resources/styles_inhalt.css">
+
+    <!-- <link rel="preload" href="../resources/styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'"> -->
+    <!-- <link rel="preload" href="../resources/styles_contact.css" as="style" onload="this.onload=null;this.rel='stylesheet'"> -->
+    <!-- <link rel="preload" href="../resources/styles_inhalt.css" as="style" onload="this.onload=null;this.rel='stylesheet'"> -->
+    
     <!-- <link rel="stylesheet" href="../resources/styles.css"> Verknüpft das externe Stylesheet (CSS-Datei) zur Gestaltung der Seite -->
     <script defer src="../resources/script.js"></script> <!-- Lädt das externe JavaScript mit der Datei "script.js" und führt es aus, nachdem das HTML-Dokument vollständig geladen wurde -->
     <script defer src="../resources/script_inhalt.js"></script> <!-- Lädt das externe JavaScript mit der Datei "script.js" und führt es aus, nachdem das HTML-Dokument vollständig geladen wurde -->

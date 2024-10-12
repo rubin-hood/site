@@ -30,6 +30,9 @@ header {
 
 html {
     overflow-y: scroll; /* $*/
+    height: 100%;
+    margin: 0;
+    padding: 0;
 }
 
 .logo-img {
@@ -45,21 +48,7 @@ html {
 }
 
 
-/* Kombinierter Hover-Effekt für Logo, Navigationslinks und Social Media Icons */
-.logo:hover,
-.nav-links a:hover,
-.social-icons a:hover,
-.mobile-social-icons a:hover,
-.hamburger-menu:hover,
-.mobile-menu a:hover {
-    color: #007c54; /* Ändert die Farbe beim Hover */
-    transition: transform 0.6s, background-color 0.6s; /* Fügt eine sanfte Übergangsanimation hinzu */
-    transform: scale(1.1); /* Vergrößert die Balken leicht beim Hover */
-}
 
-.hamburger-menu:hover span {
-    background-color: #009c6c; /* Ändert die Farbe der Balken beim Hover */
-}
 
 /* --------------------------------- Logo Styling --------------------------------- */
 .logo {
@@ -223,7 +212,7 @@ html {
 footer {
     background-color: #F6F5F1; /* Setzt die Hintergrundfarbe des Fußbereichs auf Weiß */
     color: #5a5a5a; /* Setzt die Schriftfarbe */
-    padding: 50px; /* Fügt einen Innenabstand von 20 Pixeln im Fußbereich hinzu */
+    padding: 20px 0; /* Optionale Polsterung für mehr Abstand */
     text-align: center; /* Zentriert den Text im Fußbereich */
     /* box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Fügt einen kleinen Schatten oberhalb des Fußbereichs hinzu */
     display: flex; /* Macht den Fußbereich zu einem flexiblen Layout */
@@ -232,6 +221,11 @@ footer {
     flex-direction: column; /* Ordnet die Elemente im Footer vertikal an */
     align-items: center; /* Zentriert die Elemente im Footer horizontal */
     gap: 0px; /* Fügt einen Abstand von 10px zwischen den Flex-Elementen hinzu */
+    /*margin-top: 500px; /* Abstand zwischen dem Footer und dem Rest des Inhalts */
+    padding-bottom: 20px; /* Abstand zum unteren Rand der Seite */
+    /* HINZUGEFÜGT: STELLT SICHER, DASS DER FOOTER IMMER AM UNTEREN RAND BLEIBT */
+    flex-shrink: 0;
+    min-height: 300px;
 }
 
 footer p {
@@ -241,124 +235,13 @@ footer p {
 /*---------------------------------- Ende Footer ----------------------------------*/
 
 
-
-/*---------------------------------- Slide-Effekte ----------------------------------*/
-/* Gemeinsames Styling für alle Texte, die hereinfahren sollen */
-.slide-in {
-    /* font-size: 1.9em; /* Beispielhafte Schriftgröße, passe sie nach Bedarf an */
-    opacity: 1; /* Initiale Sichtbarkeit auf 0 setzen */
-    animation-fill-mode: forwards; /* Sicherstellen, dass die Animation bei 100% bleibt */
-    animation-delay: 3s; /* Verzögerung bevor die Animation startet, z.B. 0.5 Sekunden */
-    /* opacity: 1; /* Sichtbarkeit wieder auf 1 setzen */
-
-    font-family: 'Open Sans', sans-serif; /* Beibehaltung der aktuellen Schriftart */
-    font-size: 18px; /* Standard-Schriftgröße für den Fließtext */
-    color: #202020; /* Textfarbe */
-    margin-bottom: 20px; /* Abstand nach unten für jeden Absatz */
-}
-
-/* Definiere die Animation für das Hereinfahren von links */
-.a {
-    animation: slideInFromLeft 5s ease-in-out; /* Wende die Animation auf den Text an, Dauer: 3 Sekunden */
-    font-size: 20px; /* Setzt die Schriftgröße des Logos auf 24 Pixel */
-    margin-bottom: 18px; /* NEU: Füge einen Abstand unter dem Text hinzu */
-    font-style: italic; /* Macht den Text innerhalb eines Absatzes kursiv */
-    font-family: 'Open Sans', sans-serif;
-    /* color: #009c6c; /* Grüne Farbe passend zum Thema */
-    text-align: right; /* Zentrierter Text */
-}
-
-/* Definiere die Animation für das Hereinfahren von oben */
-.b {
-    animation: slideInFromTop 4s ease-in-out; /* Wende die Animation auf den Text an, Dauer: 3 Sekunden */
-    margin-bottom: 18px; /* Füge einen Abstand unter dem Text hinzu */
-    font-weight: bold; /* Macht den gesamten Text fett */
-    font-family: 'Open Sans', sans-serif;
-    font-size: 18px; /* Standard-Schriftgröße */
-    color: #555555; /* Etwas hellerer Grauton */
-    text-align: center; /* Linksbündiger Text */
-}
-
-.c {
-    animation: slideInFromBottom 3s ease-in-out; /* Wende die Animation auf den Text an, Dauer: 3 Sekunden */
-    margin-bottom: 18px; /* Füge einen Abstand unter dem Text hinzu */
-    font-family: 'Open Sans', sans-serif;
-    font-size: 18px; /* Standard-Schriftgröße */
-    color: #555555; /* Etwas hellerer Grauton */
-    text-align: left; /* Linksbündiger Text */
-}
-
-.d {
-    animation: slideInFromBottom 2s ease-in-out; /* Animation anwenden, Dauer: 3 Sekunden */
-    margin-bottom: 18px; /* Füge einen Abstand unter dem Text hinzu */
-    font-family: 'Open Sans', sans-serif;
-    font-size: 18px; /* Standard-Schriftgröße */
-    color: #555555; /* Etwas hellerer Grauton */
-    text-align: left; /* Linksbündiger Text */
-}
-
-.e {
-    animation: slideInFromTop 3s ease-in-out; /* Animation anwenden, Dauer: 3 Sekunden */
-    margin-bottom: 18px; /* Füge einen Abstand unter dem Text hinzu */
-    font-family: 'Open Sans', sans-serif;
-    font-size: 18px; /* Standard-Schriftgröße */
-    color: #555555; /* Etwas hellerer Grauton */
-    text-align: left; /* Linksbündiger Text */
-}
-
-
-
-
-
-
-/* Animationen */
-@keyframes slideInFromLeft {
-    0% {
-        transform: translateX(-10%); /* Startposition des Texts: komplett links außerhalb des Viewports */
-        opacity: 0;
-    }
-    100% {
-        transform: translateX(0); /* Endposition des Texts: an der richtigen Position */
-        opacity: 1;
+/* HINZUGEFÜGT: MEDIA QUERY FÜR KLEINERE BILDSCHIRME */
+@media (max-height: 500px) {
+    footer {
+        position: static; /* VERHINDERT ÜBERLAPPUNG AUF SEHR KLEINEN BILDSCHIRMEN */
     }
 }
 
-@keyframes slideInFromTop {
-    0% {
-        transform: translateY(-100%); /* Startposition des Texts: komplett oben außerhalb des Viewports */
-        opacity: 0;
-    }
-    100% {
-        transform: translateY(0); /* Endposition des Texts: an der richtigen Position */
-        opacity: 1;
-    }
-}
-
-@keyframes slideInFromRight {
-    0% {
-        transform: translateX(10%); /* Startposition des Texts: komplett rechts außerhalb des Viewports */
-        opacity: 0;
-    }
-    100% {
-        transform: translateX(0); /* Endposition des Texts: an der richtigen Position */
-        opacity: 1;
-    }
-}
-
-@keyframes slideInFromBottom {
-    0% {
-        transform: translateY(100%); /* Startposition: unterhalb des sichtbaren Bereichs */
-        opacity: 0;
-    }
-    100% {
-        transform: translateY(0); /* Endposition: an der richtigen Position */
-        opacity: 1;
-    }
-}
-
-
-
-/*---------------------------------- Ende Slide-Effekte ----------------------------------*/
 
 
 /* Stile für den transparenten Header beim Scrollen */
@@ -409,7 +292,6 @@ footer p {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Schatteneffekt, um den Beitrag hervorzuheben */
 }
 
-/* Bild für Blogbeitrag */
 /* Bild für Blogbeitrag */
 img {
     max-width: 70%;
@@ -521,6 +403,7 @@ a {
 /* Textstil für Absätze */
 .blogbeitrag p {
     margin-bottom: 20px;
+    text-align: left;
 }
 
 /* Codeblöcke */

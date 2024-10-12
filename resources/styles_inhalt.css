@@ -14,9 +14,12 @@ body {
     margin: 0; /* Entfernt den Standardabstand um den gesamten Seiteninhalt */
     background-color: #F6F5F1; /* Setzt die Hintergrundfarbe der Seite auf ein helles Grau */
     color: #202020; /* Setzt die Textfarbe auf ein dunkles Grau */
-
     font-size: 18px;
     /*line-height: 1.6;*/
+
+/* HINZUGEFÜGT: WRAPPER FÜR DEN GESAMTEN SEITENINHALT */
+    display: flex;
+    flex-direction: column;
 }
 
 
@@ -24,9 +27,11 @@ body {
 /* Diese Sektion betrifft den Hauptteil der Webseite */
 main {
     /* padding: 200px 200px 200px; /* Fügt einen Abstand von 50 Pixeln um den Hauptinhalt herum hinzu */
-    /* text-align: center; /* Zentriert den Text im Hauptinhalt */
+    /*text-align: left; /* Zentriert den Text im Hauptinhalt */
     padding-top: 100px; /* Höhe des Headers plus etwas zusätzlichen Platz */
 
+    /* GEÄNDERT: HAUPTINHALT-CONTAINER */
+    flex: 1 0 auto; /* LÄSST DEN HAUPTINHALT WACHSEN, ABER NICHT SCHRUMPFEN */
 }
 
 .content { /* Stile für den zentralen Content-Bereich */
@@ -165,7 +170,7 @@ h2 {
     /* font-size: 1.9em; /* Beispielhafte Schriftgröße, passe sie nach Bedarf an */
     opacity: 1; /* Initiale Sichtbarkeit auf 0 setzen */
     animation-fill-mode: forwards; /* Sicherstellen, dass die Animation bei 100% bleibt */
-    animation-delay: 0s; /* Verzögerung bevor die Animation startet, z.B. 0.5 Sekunden */
+    animation-delay: 3s; /* Verzögerung bevor die Animation startet, z.B. 0.5 Sekunden */
     /* opacity: 1; /* Sichtbarkeit wieder auf 1 setzen */
 
     font-family: 'Open Sans', sans-serif; /* Beibehaltung der aktuellen Schriftart */
@@ -193,7 +198,7 @@ h2 {
     font-family: 'Open Sans', sans-serif;
     font-size: 18px; /* Standard-Schriftgröße */
     color: #555555; /* Etwas hellerer Grauton */
-    text-align: center; /* Linksbündiger Text */
+    text-align: left; /* Linksbündiger Text */
 }
 
 .c {
@@ -229,49 +234,53 @@ h2 {
 
 
 /* Animationen */
-@@keyframes slideInFromLeft {
+@keyframes slideInFromLeft {
     0% {
-        transform: translate3d(-10%, 0, 0); /* Verwende translate3d für Hardwarebeschleunigung */
+        transform: translateX(-10%); /* Startposition des Texts: komplett links außerhalb des Viewports */
         opacity: 0;
     }
     100% {
-        transform: translate3d(0, 0, 0);
+        transform: translateX(0); /* Endposition des Texts: an der richtigen Position */
         opacity: 1;
     }
 }
 
 @keyframes slideInFromTop {
     0% {
-        transform: translate3d(0, -100%, 0); /* Verwende translate3d für Hardwarebeschleunigung */
+        transform: translateY(-100%); /* Startposition des Texts: komplett oben außerhalb des Viewports */
         opacity: 0;
     }
     100% {
-        transform: translate3d(0, 0, 0);
+        transform: translateY(0); /* Endposition des Texts: an der richtigen Position */
         opacity: 1;
     }
 }
 
 @keyframes slideInFromRight {
     0% {
-        transform: translate3d(10%, 0, 0); /* Verwende translate3d für Hardwarebeschleunigung */
+        transform: translateX(10%); /* Startposition des Texts: komplett rechts außerhalb des Viewports */
         opacity: 0;
     }
     100% {
-        transform: translate3d(0, 0, 0);
+        transform: translateX(0); /* Endposition des Texts: an der richtigen Position */
         opacity: 1;
     }
 }
 
 @keyframes slideInFromBottom {
     0% {
-        transform: translate3d(0, 100%, 0); /* Verwende translate3d für Hardwarebeschleunigung */
+        transform: translateY(100%); /* Startposition: unterhalb des sichtbaren Bereichs */
         opacity: 0;
     }
     100% {
-        transform: translate3d(0, 0, 0);
+        transform: translateY(0); /* Endposition: an der richtigen Position */
         opacity: 1;
     }
 }
+
+
+
+/*---------------------------------- Ende Slide-Effekte ----------------------------------*/
 
 
 
