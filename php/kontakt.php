@@ -4,6 +4,10 @@ use PHPMailer\PHPMailer\Exception;
 
 require __DIR__ . '/../vendor/autoload.php';
 
+include '../layouts/header.php'; // Das Header-Layout einbinden
+
+echo '<main id="content"><div class="content"><div class="blogbeitrag"><section>';
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $name = htmlspecialchars(trim($_POST['name']));
     $email = htmlspecialchars(trim($_POST['email']));
@@ -32,17 +36,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $mail->Body = "Name: $name\nE-Mail: $email\nNachricht:\n$message";
 
                 $mail->send();
-                echo 'Danke für deine Nachricht. Wir werden uns bald bei dir melden.';
+                echo '<p>Danke für deine Nachricht. Ich werden mich bald bei dir melden.</p>';
             } catch (Exception $e) {
-                echo "Fehler: Die Nachricht konnte nicht gesendet werden. Fehler: {$mail->ErrorInfo}";
+                echo "<p>Fehler: Die Nachricht konnte nicht gesendet werden. Fehler: {$mail->ErrorInfo}</p>";
             }
         } else {
-            echo "Ungültige E-Mail-Adresse.";
+            echo "<p>Ungültige E-Mail-Adresse.</p>";
         }
     } else {
-        echo "Bitte alle Felder ausfüllen.";
+        echo "<p>Bitte alle Felder ausfüllen.</p>";
     }
 } else {
-    echo "Ungültige Anforderung.";
+    echo "<p>Ungültige Anforderung.</p>";
 }
+
+echo '</section></div></div></main>'; // Das Ende des Content-Blocks
+
+include '../layouts/footer.php'; // Das Footer-Layout einbinden
 ?>
