@@ -7,7 +7,12 @@
 
 
 /* --------------------------------- Header Styling --------------------------------- */
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
+
+
 header {
+    font-family: 'Open Sans', sans-serif;
     display: flex; /* Definiert einen flexiblen Container für den Header */
     justify-content: space-between; /* Verteilt die Inhalte im Header gleichmäßig mit Platz dazwischen */
     align-items: center; /* Zentriert die Elemente vertikal im Header */
@@ -58,22 +63,68 @@ html {
     color: inherit; /* Erbt die Textfarbe des übergeordneten Elements */
 }
 
-/* --------------------------------- Navigation Links Styling --------------------------------- */
+
+
+
+
+
+
+
+
+
+
 .nav-links {
-    display: flex; /* Stellt die Navigationslinks als flexiblen Container dar */
-    gap: 20px; /* Fügt einen Abstand von 20px zwischen den Links hinzu */
+    display: flex;
+    gap: 30px;
 }
 
 .nav-links a {
-    color: #009c6c; /* Setzt die Textfarbe der Links auf Weiß */
-    text-decoration: none; /* Entfernt Unterstreichungen von den Links */
-    font-size: 23px; /* Setzt die Schriftgröße der Links auf 18px */
-    transition: color 0.3s; /* Fügt eine sanfte Übergangsanimation für die Textfarbe hinzu */
+    position: relative;
+    color: green; /* Standardfarbe der Links */
+    text-decoration: none;
+    padding: 10px 0;
+    font-size: 20px;
+    font-weight: bold;
 }
 
-/* .nav-links a:hover {
-    color: #04A4BA; /* Ändert die Textfarbe der Links beim Hover auf einen goldenen Ton (#f0a500) */
-/* }
+.nav-links a::before, 
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    height: 2px;
+    background-color: transparent;
+    width: 0;
+    transition: width 0.5s ease;
+}
+
+.nav-links a::before {
+    top: 0;
+    left: 0;
+}
+
+.nav-links a::after {
+    bottom: 0;
+    right: 0;
+}
+
+.nav-links a:hover::before {
+    background-color: green;
+    width: 100%;
+}
+
+.nav-links a:hover::after {
+    background-color: green;
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+
 
 /* --------------------------------- Social Media Icons Styling --------------------------------- */
 .social-icons {
@@ -132,7 +183,7 @@ html {
     z-index: 1050;
     width: 200px;
     padding: 20px;
-    /* border-left: 1px solid #c2c2c2;
+    border-left: 1px solid #009c6c;
     transition: right 0.3s ease; /* Transition auch im Ausgangszustand definieren */
 }
 

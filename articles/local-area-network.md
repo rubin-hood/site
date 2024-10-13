@@ -1,6 +1,6 @@
 # Alles, was du über Local Area Networks (LAN) wissen musst
 
-![1728757960913](https://i.imgur.com/JxukbK8.png)
+![](https://i.imgur.com/JxukbK8.png)
 
 Überall um uns herum finden wir heutzutage Netzwerke, die unser Leben prägen. Ob zu Hause, im Büro oder in Schulen – sie bilden das Rückgrat unserer digitalen Kommunikation. Ein besonders weit verbreitetes Netzwerk ist das  **Local Area Network** , besser bekannt als  **LAN** . Doch was verbirgt sich hinter diesem Begriff, und warum ist es so wichtig für unsere tägliche Arbeit? In diesem Artikel klären wir das!
 
@@ -16,7 +16,7 @@ In einem typischen LAN sind die Geräte direkt miteinander verbunden, entweder �
 
 ## Die Vorteile eines LANs
 
-![1728757960913](image/local-area-network/1728757960913.png)
+![](https://i.imgur.com/5Ml1gDk.png)
 
 Geschwindigkeit und Zuverlässigkeit sind große Stärken eines LANs. Da die Entfernung zwischen den Geräten in einem LAN relativ gering ist, sind die Übertragungsgeschwindigkeiten oft höher im Vergleich zu Weitverkehrsnetzwerken (WAN). Moderne LANs können Datenübertragungsraten von bis zu 10 Gbit/s erreichen, was besonders für datenintensive Anwendungen wie Video-Streaming oder große Dateiübertragungen nützlich ist.
 

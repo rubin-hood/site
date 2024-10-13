@@ -8,7 +8,7 @@ include 'layouts/header.php'; ?>
 <div class="content">
           <p class="slide-in a">Der digitale Wald, in dem Kreativität und Technologie aufeinander treffen.</p>
           <p class="slide-in b">Hallo und herzlich willkommen!</p>
-          <p class="slide-in c">Ich heiße Andreas, und ich habe diese Website ins Leben gerufen, um meine Leidenschaft für IT-Projekte zu präsentieren.</p>
+          <p class="slide-in c">Ich heiße Andreas und ich habe diese Website ins Leben gerufen, um meine Leidenschaft für IT-Projekte zu präsentieren.</p>
           <p class="slide-in e">Meine Webseite läuft auf einem Raspberry Pi 5 mit Ubuntu Server und nutzt PHP, um eine moderne und interaktive Web-Erfahrung zu bieten. Egal ob du Einsteiger bist oder fortgeschrittenes Wissen hast – der Quellcode ist auf GitHub frei zugänglich. So hast du die Möglichkeit, hinter die Kulissen zu blicken, dich weiterzubilden oder selbst zum Projekt beizutragen.</p>
           <p class="slide-in d">In der IT-Welt gibt es viele komplexe Lösungen und Wissen, das oft nur wenigen zugänglich ist. Rubin-Hood steht dafür, dieses Wissen aufzubrechen und verständlich für alle bereitzustellen. So wie Robin Hood die Macht und Ressourcen gerecht verteilte, zielt Rubin-Hood darauf ab, IT-Wissen frei und einfach zugänglich zu machen, damit jeder davon profitieren kann. Wie der legendäre Held Robin Hood, der Gutes tat und die Welt auf seine Weise veränderte, möchte auch ich durch innovative Lösungen und kreative Ansätze einen positiven Beitrag leisten – aber eben in der Welt der IT.</p>
           </div>
@@ -45,7 +45,7 @@ include 'layouts/header.php'; ?>
 
     <section class="content-section lazy-content">
         <a href="articles/virtualization-in-large-companies.php" class="image-container slide-right">
-            <img data-src="https://i.imgur.com/Foo8KK9.jpeg" alt="Network Setup Image">
+            <img data-src="https://i.imgur.com/0JUPZ8J.png" alt="Network Setup Image">
         </a>
         <div class="text-container slide-up">
             <h2>Virtualisierung im Großunternehmen: Ein Leitfaden für eine effiziente IT-Infrastruktur</h2>
@@ -63,11 +63,22 @@ include 'layouts/header.php'; ?>
             <a href="articles/apply-security-patches-on-linux-windows-systems.php" class="read-more-btn">WEITER LESEN</a>
         </div>
         <a href="articles/apply-security-patches-on-linux-windows-systems.php" class="image-container slide-up">
-            <img data-src="https://i.imgur.com/KhkGmNV.jpeg" alt="Remote Desktop Image">
+            <img data-src="https://i.imgur.com/WLBcrfV.png" alt="Remote Desktop Image">
         </a>
     </section>
 
+    <div class="divider"></div>
 
+    <section class="content-section lazy-content">
+        <a href="articles/vRaspberry-Pi.php" class="image-container slide-right">
+            <img data-src="https://i.imgur.com/SGdDBV6.png" alt="Network Setup Image">
+        </a>
+        <div class="text-container slide-up">
+            <h2>Installation von Ubuntu Server auf dem Raspberry Pi 5: Eine Schritt-für-Schritt-Anleitung</h2>
+            <p>Der Raspberry Pi 5 ist ein leistungsstarker Einplatinencomputer, der sich hervorragend als Heimserver eignet. In diesem Blogbeitrag zeige ich Ihnen, wie Sie Ubuntu Server auf Ihrem Raspberry Pi 5 installieren können. Folgen Sie dieser detaillierten Anleitung, um Ihren eigenen Ubuntu-Server einzurichten.</p>
+            <a href="articles/Raspberry-Pi.php" class="read-more-btn">WEITER LESEN</a>
+        </div>
+    </section>
 
 
 
