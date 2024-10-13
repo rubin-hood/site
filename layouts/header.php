@@ -38,7 +38,7 @@
     <div class="social-icons"> <!-- Container für die Social-Media-Icons -->
         <a href="https://github.com/rubin-hood" class="fa-brands fa-github"></a> <!-- Link zu GitHub mit dem entsprechenden Icon -->
         <a href="#" class="fa-brands fa-twitter"></a> <!-- Link zu Twitter mit dem entsprechenden Icon -->
-        <a href="#" class="fa-brands fa-youtube"></a> <!-- Link zu YouTube mit dem entsprechenden Icon -->
+        <a href="https://www.youtube.com/@Rubin-Hood/videos" class="fa-brands fa-youtube"></a> <!-- Link zu YouTube mit dem entsprechenden Icon -->
     </div>
     <div class="hamburger-menu"> <!-- Hamburger-Menü für mobile Geräte -->
         <span></span> <!-- Die drei Balken des Hamburger-Menüs -->
@@ -60,7 +60,7 @@
     <div class="mobile-social-icons"> <!-- Container für die Social-Media-Icons im mobilen Menü -->
         <a href="https://github.com/rubin-hood" class="fa-brands fa-github"></a> <!-- Link zu GitHub mit dem entsprechenden Icon -->
         <a href="#" class="fa-brands fa-twitter"></a> <!-- Link zu Twitter mit dem entsprechenden Icon -->
-        <a href="#" class="fa-brands fa-youtube"></a> <!-- Link zu YouTube mit dem entsprechenden Icon -->
+        <a href="https://www.youtube.com/@Rubin-Hood/videos" class="fa-brands fa-youtube"></a> <!-- Link zu YouTube mit dem entsprechenden Icon -->
     </div>
 </div>
 <!------------------------------------------ Ende des Header ------------------------------------------>
