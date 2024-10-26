@@ -7,9 +7,8 @@ include '../layouts/header.php'; ?>
 <div class="blogbeitrag">
     <section>
 
-    <p>Wenn du Fragen hast, Anregungen geben möchtest oder einfach nur eine Nachricht hinterlassen willst, bist du hier genau richtig.
-    Ich freue mich, von dir zu hören! Fülle einfach das untenstehende Formular aus und ich werde mich so schnell wie möglich bei dir melden.</p>
-    <p>Vielen Dank für dein Interesse und deine Zeit!</p>
+    <p>If you have questions, want to give suggestions, or simply want to leave a message, you're in the right place. I look forward to hearing from you! Simply fill out the form below and I will get back to you as soon as possible.</p>
+    <p>Thank you for your interest and your time!</p>
 
     <form action="../php/kontakt.php" method="POST">
   <label for="name">Name:</label>

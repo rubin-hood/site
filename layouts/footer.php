@@ -1,5 +1,5 @@
 <footer>
-        <p>&copy; 2024 Rubin-Hood</p>
+<div class="copyright">© 2024 Rubin-Hood</div>
     </footer>
 </body>
 </html>

@@ -12,21 +12,27 @@ include '../layouts/header.php';
     <title>Über Andreas - Rubin-Hood</title>
 </head>
 <body>
-    <h2>Hallo, ich bin Andreas – IT-Enthusiast, Problemlöser und kreativer Kopf hinter Rubin-Hood</h2>
+    <h2>Hello, I'm Andreas - IT enthusiast, problem solver, and tech whisperer.</h2>
     <p>
-        Mein Weg in die Welt der Technik begann mit einer einfachen Neugier für Computer und hat sich über die Jahre, durch meine Erfahrungen in der Elektrik und Elektronik, zu einer Leidenschaft für IT-Projekte und innovative Lösungen entwickelt.
+    While others talk to their computer, I listen to it and tell you what it really means!
     </p>
     <p>
-        Beruflich habe ich bereits in verschiedenen technischen Bereichen gearbeitet, von der Wartung und Programmierung elektronischer Schließanlagen bis hin zur Verwaltung von IT-Infrastrukturen im öffentlichen Dienst. Dabei habe ich immer wieder festgestellt, dass der Zugang zu technischem Wissen oft unnötig kompliziert ist. Genau das möchte ich mit dieser Website ändern.
+    When others see 'Error 404', I see an exciting challenge!
     </p>
     <p>
-        Mit Rubin-Hood verfolge ich das Ziel, IT-Wissen verständlich und zugänglich zu machen, damit jeder – ob Anfänger oder Profi – davon profitieren kann. Ich teile meine Erfahrungen, biete nützliche Tipps und setze kreative Projekte um, die zeigen, dass Technologie nicht nur komplex, sondern auch spannend und zugänglich sein kann.
+    I transform computer language into human language, so that you too can understand what your computer is up to all day!
     </p>
     <p>
-        In meiner Freizeit experimentiere ich gerne mit neuen Technologien, entwickle meine Fähigkeiten weiter und bin immer auf der Suche nach neuen Herausforderungen, die mich und andere weiterbringen.
+    Professionally, I have worked in various technical fields. In doing so, I have repeatedly found that access to technical knowledge is often unnecessarily complicated. This is exactly what I want to change with this website.
     </p>
     <p>
-        Ich freue mich darauf, diese Reise mit dir zu teilen und bin gespannt, wohin sie uns führt!
+    With Rubin-Hood, I pursue the goal of making IT knowledge understandable and accessible so that everyone - whether beginner or professional - can benefit from it. I share my experiences, offer useful tips, and implement creative projects that show that technology can be not only complex but also exciting and accessible.
+    </p>
+    <p>
+    In my free time, I like to experiment with new technologies, develop my skills further, and am always looking for new challenges that help me and others progress.
+    </p>
+    <p>
+    I look forward to sharing this journey with you and am excited to see where it takes us!
     </p>
 
     </section>

@@ -63,6 +63,7 @@ main {
     margin-bottom: 20px;
     padding: 20px 0;
     min-height: 20vh;
+    margin: 0 auto;
 }
 
 /* Mobiles Layout */
@@ -318,7 +319,7 @@ h2 {
 }
 
 .image-container:hover img {
-    transform: scale(1.05);
+    /*transform: scale(1.05);*/
 }
 
 .slide-right {
