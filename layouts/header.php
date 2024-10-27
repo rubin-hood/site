@@ -34,7 +34,6 @@
         <a href="../navigation/about.php">About</a> <!-- Link zur "Über uns"-Seite -->
         <a href="../navigation/projects.php">My Projects</a> <!-- Link zur Seite mit den angebotenen Diensten -->
         <a href="../navigation/contact.php">Contact</a> <!-- Link zur Kontaktseite -->
-        <a href="../navigation/notion.php">Notion</a> <!-- Link zur Startseite -->
     </nav>
     
     <div class="social-icons"> <!-- Container für die Social-Media-Icons -->
