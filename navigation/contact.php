@@ -17,7 +17,7 @@ include '../layouts/header.php'; ?>
   <label for="email">E-Mail:</label>
   <input type="email" id="email" name="email" required><br><br>
 
-  <label for="message">Nachricht:</label><br>
+  <label for="message">Message:</label><br>
   <textarea id="message" name="message" rows="5" required></textarea><br><br>
 
   <input type="submit" value="Senden">
