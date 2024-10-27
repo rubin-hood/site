@@ -11,7 +11,7 @@ include '../layouts/header.php';
         ini_set('display_errors', 1);
         error_reporting(E_ALL);
 
-        $notionPageId = '05987e36836c445dae914ed2c79fb0b9';
+        $notionPageId = '12c405b924008088a65ccf1e9822e32f';
         $apiUrl = "https://notion-api.splitbee.io/v1/page/{$notionPageId}";
 
         function shouldSkipBlock($block) {
