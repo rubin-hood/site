@@ -514,7 +514,11 @@ include 'layouts/header.php'; ?>
 
 <section class="content-section lazy-content">
     <div class="image-container slide-right">
+<<<<<<< HEAD
         <img data-src="https://img.notionusercontent.com/s3/prod-files-secure%2Ff51f64b6-a122-410f-847d-cc4b74c60a02%2F7009ec04-6477-40e3-84dd-f3d028cf9e0e%2Fimage.png/size/w=1420?exp=1730114855&sig=Q_-TgcNSaytbewUjhqYeizqUAZKrj9gAbESAKI4ytQU" alt="Network Setup Image">
+=======
+        <img data-src="https://checker-tiara-9d0.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Ff51f64b6-a122-410f-847d-cc4b74c60a02%2F7009ec04-6477-40e3-84dd-f3d028cf9e0e%2Fimage.png?table=block&id=12c405b9-2400-80ea-85fa-c6db2531b180&spaceId=f51f64b6-a122-410f-847d-cc4b74c60a02&width=2000&userId=&cache=v2" alt="Network Setup Image">
+>>>>>>> 0dab24a6bce5b5c6bf7efaeff9cc7afaafa3f81e
     </div>
     <div class="text-container slide-up">
         <h2>Deep Dive: IBM FlashSystem 5000 - The Technical Marvel Revolutionizing Enterprise Storage</h2>

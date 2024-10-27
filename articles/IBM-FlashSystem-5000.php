@@ -226,4 +226,8 @@ include '../layouts/header.php';
 </div>
 </main>
 
+<<<<<<< HEAD
 <?php include '../layouts/footer.php'; ?>
+=======
+<?php include '../layouts/footer.php'; ?>
+>>>>>>> 0dab24a6bce5b5c6bf7efaeff9cc7afaafa3f81e
