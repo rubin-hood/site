@@ -509,20 +509,20 @@ include 'layouts/header.php'; ?>
     </div>
 </section>
 -->
-<!--
+
 <div class="divider"></div>
 
 <section class="content-section lazy-content">
     <div class="image-container slide-right">
-        <img data-src="IMAGE.png" alt="Network Setup Image">
+        <img data-src="https://img.notionusercontent.com/s3/prod-files-secure%2Ff51f64b6-a122-410f-847d-cc4b74c60a02%2F7009ec04-6477-40e3-84dd-f3d028cf9e0e%2Fimage.png/size/w=1420?exp=1730114855&sig=Q_-TgcNSaytbewUjhqYeizqUAZKrj9gAbESAKI4ytQU" alt="Network Setup Image">
     </div>
     <div class="text-container slide-up">
-        <h2>HEADLINE TEXT</h2>
-        <p>CONTENT TEXT</p>
-        <a href="articles/PAGE.php" class="read-more-btn">READ MORE</a>
+        <h2>Deep Dive: IBM FlashSystem 5000 - The Technical Marvel Revolutionizing Enterprise Storage</h2>
+        <p>Are you tired of traditional storage solutions slowing down your business? Legacy systems often mean compromised performance and complex management. The IBM FlashSystem 5000 changes the game - bringing enterprise-grade storage capabilities to small and mid-sized businesses without the enterprise price tag. This isn't just an upgrade; it's a complete reimagining of what entry-level storage can do.</p>
+        <a href="articles/IBM-FlashSystem-5000.php" class="read-more-btn">READ MORE</a>
     </div>
 </section>
--->
+
 
 
 
