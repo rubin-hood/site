@@ -6,7 +6,7 @@
 <head> <!-- Enthält Metainformationen über das Dokument -->
     <meta charset="UTF-8"> <!-- Legt die Zeichenkodierung des Dokuments auf UTF-8 fest -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Setzt das Viewport-Tag für responsives Design, damit die Seite auf mobilen Geräten richtig angezeigt wird -->
-    <title>Responsive Header</title> <!-- Definiert den Titel der Webseite, der im Browser-Tab angezeigt wird -->
+    <title>Rubin-Hood - IT Knowledge Made Understandable for Everyone</title> <!-- Definiert den Titel der Webseite, der im Browser-Tab angezeigt wird -->
     <link rel="stylesheet" href="../resources/styles_header.css">
     <link rel="stylesheet" href="../resources/styles_contact.css">
     <link rel="stylesheet" href="../resources/styles_inhalt.css">
