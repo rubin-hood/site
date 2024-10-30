@@ -54,7 +54,7 @@
     <span class="close-menu">&times;</span> <!-- Schließen-Symbol -->
     <nav> <!-- Navigationselement für das mobile Menü -->
         <a href="../index.php">Home</a> <!-- Link zur Startseite -->
-        <a href="../blog.php">Blog</a>
+        <a href="../navigation/blog.php">Blog</a>
         <a href="../navigation/about.php">About</a> <!-- Link zur "Über uns"-Seite -->
         <a href="../navigation/projects.php">My Projects</a> <!-- Link zur Seite mit den angebotenen Diensten -->
         <a href="../navigation/contact.php">Contact</a>
