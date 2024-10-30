@@ -1,3 +1,6 @@
+---
+date: 20.1.2024
+---
 
 # Installation von Ubuntu Server auf dem Raspberry Pi 5: Eine Schritt-für-Schritt-Anleitung
 
