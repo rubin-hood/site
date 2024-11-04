@@ -302,9 +302,9 @@ $searchQuery = isset($_GET['search']) ? trim($_GET['search']) : '';
             if (!empty($searchQuery)) {
                 $articles = searchArticles($searchQuery, $articlesDir);
                 if (empty($articles)) {
-                    echo '<p>Keine Artikel für "' . htmlspecialchars($searchQuery) . '" gefunden.</p>';
+                    echo '<p>No articles found for "' . htmlspecialchars($searchQuery) . '"</p>';
                 } else {
-                    echo '<p>Suchergebnisse für "' . htmlspecialchars($searchQuery) . '":</p>';
+                    echo '<p>Search results for "' . htmlspecialchars($searchQuery) . '":</p>';
                 }
             } else {
                 $files = glob($articlesDir . '*.md');
