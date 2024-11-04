@@ -8,11 +8,9 @@ include '../layouts/header.php';
 <div class="content"> <!-- Start des Content-Bereichs -->
 <div class="blogbeitrag">
     <section>
-
-    <title>Über Andreas - Rubin-Hood</title>
 </head>
 <body>
-    <h2>Hello, I'm Andreas - IT enthusiast, problem solver, and tech whisperer.</h2>
+    <h2>Hello, I'm an IT enthusiast, problem solver, and tech whisperer.</h2>
     <p>
     While others talk to their computer, I listen to it and tell you what it really means!
     </p>

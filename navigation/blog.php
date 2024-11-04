@@ -5,6 +5,7 @@ include '../layouts/header.php';
 // Initialisierung der Variablen
 $articlesDir = dirname(__DIR__) . '/articles/';
 $articleName = isset($_GET['article']) ? $_GET['article'] : null;
+$searchQuery = isset($_GET['search']) ? trim($_GET['search']) : '';
 ?>
 
 <main id="content">
@@ -37,7 +38,65 @@ $articleName = isset($_GET['article']) ? $_GET['article'] : null;
             return [$frontmatter, $content];
         }
 
-        // Style für Navigation
+        // Funktion zum Extrahieren des ersten Bildes
+        function getFirstImage($content) {
+            if (preg_match('/!\[.*?\]\((.*?)\)/', $content, $matches)) {
+                return $matches[1];
+            }
+            return null;
+        }
+
+        // Funktion zum Extrahieren des Textauszugs
+        function getExcerpt($content, $length = 200) {
+            // Entferne Überschriften
+            $content = preg_replace('/^#.*$/m', '', $content);
+            // Entferne Bilder
+            $content = preg_replace('/!\[.*?\]\(.*?\)/', '', $content);
+            // Entferne Markdown-Formatierung
+            $content = preg_replace('/[*_`#]/', '', $content);
+            // Bereinige mehrfache Leerzeichen und Zeilenumbrüche
+            $content = preg_replace('/\s+/', ' ', trim($content));
+            // Kürze den Text
+            if (strlen($content) > $length) {
+                $content = substr($content, 0, strrpos(substr($content, 0, $length + 10), ' ')) . '...';
+            }
+            return $content;
+        }
+
+        // Funktion zum Durchsuchen der Artikel
+        function searchArticles($searchQuery, $articlesDir) {
+            $results = [];
+            $files = glob($articlesDir . '*.md');
+            
+            foreach ($files as $file) {
+                if (is_file($file)) {
+                    $content = file_get_contents($file);
+                    list($frontmatter, $content) = getFrontMatter($content);
+                    
+                    preg_match('/^#\s*(.+)$/m', $content, $matches);
+                    $title = isset($matches[1]) ? trim($matches[1]) : basename($file, '.md');
+                    
+                    if (stripos($title, $searchQuery) !== false || 
+                        stripos($content, $searchQuery) !== false) {
+                        
+                        $firstImage = getFirstImage($content);
+                        $excerpt = getExcerpt($content);
+                        
+                        $results[] = [
+                            'title' => $title,
+                            'file' => basename($file, '.md'),
+                            'date' => isset($frontmatter['date']) ? $frontmatter['date'] : date('d.m.Y', filemtime($file)),
+                            'image' => $firstImage,
+                            'excerpt' => $excerpt
+                        ];
+                    }
+                }
+            }
+            
+            return $results;
+        }
+
+        // Style für Navigation und Artikel-Liste
         echo '
         <style>
             .back-link-container {
@@ -47,11 +106,12 @@ $articleName = isset($_GET['article']) ? $_GET['article'] : null;
             .back-link {
                 display: inline-block;
                 color: #009c6c;
-                text-decoration: none;
+                text-decoration: none !important;
                 font-weight: 500;
             }
             .back-link:hover {
-                text-decoration: underline;
+                color: #AA0600;
+                text-decoration: none !important;
             }
             .article-navigation {
                 display: flex;
@@ -62,15 +122,110 @@ $articleName = isset($_GET['article']) ? $_GET['article'] : null;
             }
             .nav-arrow {
                 color: #009c6c;
-                text-decoration: none;
+                text-decoration: none !important;
                 display: flex;
                 align-items: center;
                 gap: 5px;
             }
             .nav-arrow:hover {
-                opacity: 0.8;
+                color: #AA0600;
+                opacity: 1;
+            }
+            .article-item {
+                display: flex;
+                gap: 20px;
+                padding: 20px;
+                border-bottom: 1px solid #eee;
+                transition: background-color 0.2s;
+            }
+            .article-item:hover {
+                background-color: #f9f9f9;
+            }
+            .article-image {
+                width: 200px;
+                height: 150px;
+                object-fit: cover;
+                border-radius: 4px;
+                flex-shrink: 0;
+            }
+            .article-content {
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+            }
+            .article-title {
+                font-size: 1.4em;
+                color: #2c3e50;
+                text-decoration: none !important;
+                font-weight: bold;
+                display: block;
+            }
+            .article-title:hover {
+                color: #AA0600;
+            }
+            .article-date {
+                color: #666;
+                font-size: 0.9em;
+            }
+            .article-excerpt {
+                color: #555;
+                line-height: 1.6;
+                font-size: 1em;
+            }
+            .search-container {
+                margin: 20px 0;
+                text-align: center;
+            }
+            .search-container input {
+                padding: 8px 15px;
+                width: 300px;
+                border: 1px solid #ddd;
+                border-radius: 4px;
+                margin-right: 10px;
+            }
+            .search-container button {
+                padding: 8px 20px;
+                background: #009c6c;
+                color: white;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+            }
+            .search-container button:hover {
+                background: #AA0600;
+            }
+            /* Pagination Links Hover */
+            [style*="color: #009c6c"]:hover {
+                background: #AA0600 !important;
+                border-color: #AA0600 !important;
+                color: white !important;
+            }
+            @media (max-width: 768px) {
+                .article-item {
+                    flex-direction: column;
+                }
+                .article-image {
+                    width: 100%;
+                    height: 200px;
+                }
+                .search-container input {
+                    width: 100%;
+                    margin-bottom: 10px;
+                }
             }
         </style>';
+
+        // Suchformular
+        echo '<div class="search-container">
+            <form action="/navigation/blog.php" method="GET">
+                <input type="text" 
+                       name="search" 
+                       value="' . htmlspecialchars($searchQuery) . '" 
+                       placeholder="Suche in Artikeln...">
+                <button type="submit">Suchen</button>
+            </form>
+        </div>';
 
         $markdownFile = $articleName ? $articlesDir . $articleName . '.md' : null;
 
@@ -79,7 +234,6 @@ $articleName = isset($_GET['article']) ? $_GET['article'] : null;
             list($frontmatter, $content) = getFrontMatter($rawContent);
             $html = $parsedown->text($content);
             
-            // Hole alle Artikel für die Navigation
             $allFiles = glob($articlesDir . '*.md');
             $allArticles = [];
             
@@ -98,7 +252,6 @@ $articleName = isset($_GET['article']) ? $_GET['article'] : null;
                 }
             }
 
-            // Sortiere nach Datum
             usort($allArticles, function($a, $b) {
                 $dateA = DateTime::createFromFormat('d.m.Y', $a['date']) ?: new DateTime();
                 $dateB = DateTime::createFromFormat('d.m.Y', $b['date']) ?: new DateTime();
@@ -109,20 +262,16 @@ $articleName = isset($_GET['article']) ? $_GET['article'] : null;
             $prevArticle = $currentIndex > 0 ? $allArticles[$currentIndex - 1] : null;
             $nextArticle = $currentIndex < count($allArticles) - 1 ? $allArticles[$currentIndex + 1] : null;
 
-            // Oberer Zurück-Link
             echo '<div class="back-link-container">';
             echo '<a href="/navigation/blog.php" class="back-link">← Zurück zur Übersicht</a>';
             echo '</div>';
             
-            // Artikel-Inhalt
             echo $html;
             
-            // Unterer Zurück-Link
             echo '<div class="back-link-container">';
             echo '<a href="/navigation/blog.php" class="back-link">← Zurück zur Übersicht</a>';
             echo '</div>';
 
-            // Artikel-Navigation mit begrenzter Breite
             echo '<div class="article-navigation">';
             if ($prevArticle) {
                 echo '<a href="/navigation/blog.php?article=' . urlencode($prevArticle['file']) . '" class="nav-arrow">
@@ -142,55 +291,73 @@ $articleName = isset($_GET['article']) ? $_GET['article'] : null;
             echo '</div>';
 
         } else {
-            // Artikelübersicht
-            $files = glob($articlesDir . '*.md');
-            $articles = [];
-            
-            foreach ($files as $file) {
-                if (is_file($file) && pathinfo($file, PATHINFO_EXTENSION) === 'md') {
-                    $rawContent = file_get_contents($file);
-                    list($frontmatter, $content) = getFrontMatter($rawContent);
-                    
-                    preg_match('/^#\s*(.+)$/m', $content, $matches);
-                    $title = isset($matches[1]) ? trim($matches[1]) : basename($file, '.md');
-                    
-                    $articles[] = [
-                        'title' => $title,
-                        'file' => basename($file, '.md'),
-                        'date' => isset($frontmatter['date']) ? $frontmatter['date'] : date('d.m.Y', filemtime($file))
-                    ];
+            // Artikelübersicht oder Suchergebnisse
+            if (!empty($searchQuery)) {
+                $articles = searchArticles($searchQuery, $articlesDir);
+                if (empty($articles)) {
+                    echo '<p>Keine Artikel für "' . htmlspecialchars($searchQuery) . '" gefunden.</p>';
+                } else {
+                    echo '<p>Suchergebnisse für "' . htmlspecialchars($searchQuery) . '":</p>';
+                }
+            } else {
+                $files = glob($articlesDir . '*.md');
+                $articles = [];
+                
+                foreach ($files as $file) {
+                    if (is_file($file) && pathinfo($file, PATHINFO_EXTENSION) === 'md') {
+                        $rawContent = file_get_contents($file);
+                        list($frontmatter, $content) = getFrontMatter($rawContent);
+                        
+                        preg_match('/^#\s*(.+)$/m', $content, $matches);
+                        $title = isset($matches[1]) ? trim($matches[1]) : basename($file, '.md');
+                        
+                        $firstImage = getFirstImage($content);
+                        $excerpt = getExcerpt($content);
+                        
+                        $articles[] = [
+                            'title' => $title,
+                            'file' => basename($file, '.md'),
+                            'date' => isset($frontmatter['date']) ? $frontmatter['date'] : date('d.m.Y', filemtime($file)),
+                            'image' => $firstImage,
+                            'excerpt' => $excerpt
+                        ];
+                    }
                 }
             }
 
-            // Nach Datum sortieren
             usort($articles, function($a, $b) {
                 $dateA = DateTime::createFromFormat('d.m.Y', $a['date']) ?: new DateTime();
                 $dateB = DateTime::createFromFormat('d.m.Y', $b['date']) ?: new DateTime();
                 return $dateB <=> $dateA;
             });
 
-            // Pagination
-            $itemsPerPage = 5; // Anzahl der Artikel pro Seite
+            $itemsPerPage = 5;
             $currentPage = isset($_GET['page']) ? max(1, intval($_GET['page'])) : 1;
             $totalPages = ceil(count($articles) / $itemsPerPage);
             $offset = ($currentPage - 1) * $itemsPerPage;
             $articlesOnPage = array_slice($articles, $offset, $itemsPerPage);
 
-
-            
-            if (empty($articles)) {
-                echo '<p>Keine Blog-Beiträge gefunden.</p>';
-            } else {
+            if (!empty($articles)) {
                 echo '<div class="articles-list" style="display: flex; flex-direction: column; gap: 20px;">';
                 foreach ($articlesOnPage as $article) {
                     ?>
-                    <div class="article-item" style="padding: 15px; border-bottom: 1px solid #eee; transition: background-color 0.2s;">
-                        <a href="/navigation/blog.php?article=<?php echo urlencode($article['file']); ?>" 
-                           style="font-size: 1.2em; color: #2c3e50; text-decoration: none; font-weight: bold; display: block; margin-bottom: 5px;">
-                            <?php echo htmlspecialchars($article['title']); ?>
-                        </a>
-                        <div style="color: #666; font-size: 0.9em;">
-                            <?php echo htmlspecialchars($article['date']); ?>
+                    <div class="article-item">
+                        <?php if ($article['image']): ?>
+                            <img src="<?php echo htmlspecialchars($article['image']); ?>" 
+                                 alt="<?php echo htmlspecialchars($article['title']); ?>"
+                                 class="article-image">
+                        <?php endif; ?>
+                        <div class="article-content">
+                            <a href="/navigation/blog.php?article=<?php echo urlencode($article['file']); ?>" 
+                               class="article-title">
+                                <?php echo htmlspecialchars($article['title']); ?>
+                            </a>
+                            <div class="article-date">
+                                <?php echo htmlspecialchars($article['date']); ?>
+                            </div>
+                            <div class="article-excerpt">
+                                <?php echo htmlspecialchars($article['excerpt']); ?>
+                            </div>
                         </div>
                     </div>
                     <?php
@@ -201,7 +368,11 @@ $articleName = isset($_GET['article']) ? $_GET['article'] : null;
                     echo '<div style="display: flex; justify-content: center; gap: 10px; margin-top: 30px;">';
                     for ($i = 1; $i <= $totalPages; $i++) {
                         $activeStyle = $i === $currentPage ? 'background: #009c6c; color: white;' : 'color: #009c6c;';
-                        echo '<a href="/navigation/blog.php?page=' . $i . '" style="padding: 5px 10px; text-decoration: none; border: 1px solid #009c6c; ' . $activeStyle . '">' . $i . '</a>';
+                        $pageUrl = '/navigation/blog.php?page=' . $i;
+                        if (!empty($searchQuery)) {
+                            $pageUrl .= '&search=' . urlencode($searchQuery);
+                        }
+                        echo '<a href="' . $pageUrl . '" style="padding: 5px 10px; text-decoration: none !important; border: 1px solid #009c6c; ' . $activeStyle . '">' . $i . '</a>';
                     }
                     echo '</div>';
                 }
