@@ -87,6 +87,10 @@ html {
     font-weight: bold;
 }
 
+.nav-links a:hover {
+    color: #AA0600;
+}
+
 .nav-links a::before, 
 .nav-links a::after {
     content: '';
@@ -412,10 +416,7 @@ img {
     margin-bottom: 15px; /* Abstand unter dem Absatz */
 }
 
-.nav-links a {
-    color: #009c6c; /* Setzt die Textfarbe der Links */
-    text-decoration: none; /* Entfernt Unterstreichungen von den Links */
-}
+
 
 a {
     color: inherit; /* Erbt die Textfarbe des Beitrags */

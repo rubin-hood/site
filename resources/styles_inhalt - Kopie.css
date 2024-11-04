@@ -1,0 +1,353 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
+
+
+
+body {
+    font-family: 'Open Sans', sans-serif; /* Setzt die Schriftart auf Arial oder eine serifenlose Ersatzschrift */
+    margin: 0; /* Entfernt den Standardabstand um den gesamten Seiteninhalt */
+    background-color: #F6F5F1; /* Setzt die Hintergrundfarbe der Seite auf ein helles Grau */
+    color: #202020; /* Setzt die Textfarbe auf ein dunkles Grau */
+    font-size: 18px;
+    /*line-height: 1.6;*/
+
+/* HINZUGEFÜGT: WRAPPER FÜR DEN GESAMTEN SEITENINHALT */
+    display: flex;
+    flex-direction: column;
+}
+
+
+/*---------------------------------- Hauptinhalt ----------------------------------*/
+/* Diese Sektion betrifft den Hauptteil der Webseite */
+main {
+    /* padding: 200px 200px 200px; /* Fügt einen Abstand von 50 Pixeln um den Hauptinhalt herum hinzu */
+    /*text-align: left; /* Zentriert den Text im Hauptinhalt */
+    padding-top: 100px; /* Höhe des Headers plus etwas zusätzlichen Platz */
+
+    /* GEÄNDERT: HAUPTINHALT-CONTAINER */
+    flex: 1 0 auto; /* LÄSST DEN HAUPTINHALT WACHSEN, ABER NICHT SCHRUMPFEN */
+}
+
+.content { /* Stile für den zentralen Content-Bereich */
+    width: 100%; /* Breite des Inhaltsbereichs ist 80% der Seitenbreite */
+    max-width: 1200px; /* Maximale Breite von 1200px, um auf großen Bildschirmen nicht zu breit zu werden */
+    min-height: auto; /* Setzt eine minimale Höhe von 300px */
+    margin: 30px auto 0 auto; /* Setzt 200px nach oben und zentriert horizontal */
+    padding: 20px; /* Fügt innenliegenden Abstand hinzu, um den Inhalt vom Rand abzusetzen */
+    background-color: #F6F5F1; /* Setzt die Hintergrundfarbe des Content-Bereichs auf weiß */
+    /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Fügt einen leichten Schatten hinzu, um den Bereich hervorzuheben */
+    border-radius: 8px; /* Rundet die Ecken des Content-Bereichs ab */
+}
+
+.container {
+    width: 100%; /* Breite des Inhaltsbereichs ist 80% der Seitenbreite */
+    max-width: 1200px; /* Maximale Breite von 1200px, um auf großen Bildschirmen nicht zu breit zu werden */
+    min-height: 10px; /* Setzt eine minimale Höhe von 300px */
+    margin: 10px auto 0 auto; /* Setzt 200px nach oben und zentriert horizontal */
+    padding: 10px; /* Fügt innenliegenden Abstand hinzu, um den Inhalt vom Rand abzusetzen */
+    background-color: #F6F5F1; /* Setzt die Hintergrundfarbe des Content-Bereichs auf weiß */
+    /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Fügt einen leichten Schatten hinzu, um den Bereich hervorzuheben */
+    border-radius: 8px; /* Rundet die Ecken des Content-Bereichs ab */
+}
+
+/* Desktop-Layout (Standard) */
+.content-section {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    padding: 20px 0;
+    min-height: 20vh;
+    margin: 0 auto;
+}
+
+/* Mobiles Layout */
+@media (max-width: 768px) {
+    .content-section {
+        flex-direction: column; /* Stapelt das Bild über den Text */
+    }
+
+    .image-container {
+        order: -1; /* Bild zuerst anzeigen */
+        padding: 10px; /* Weniger Padding für kleine Bildschirme */
+    }
+
+    .text-container {
+        padding: 10px; /* Weniger Padding für kleine Bildschirme */
+    }
+}
+
+
+.image-container, .text-container {
+    flex: 1;
+    padding: 20px;
+}
+
+img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    opacity: 1;
+    transition: opacity 1.5s;
+}
+
+img.loaded {
+    opacity: 1;
+}
+
+h2 {
+    margin-bottom: 15px;
+    font-size: 24px;
+    color: #009c6c; /* Ändere die Textfarbe */
+}
+
+/* Initial content animations */
+.initial-content .slide-right {
+    animation: slideRight 2s ease-out forwards;
+}
+
+.initial-content .slide-up {
+    animation: slideUp 2s ease-out forwards;
+}
+
+.initial-content img {
+    opacity: 1;
+}
+
+/* Lazy content styles */
+.lazy-content {
+    opacity: 0;
+    transition: opacity 1.5s;
+    will-change: opacity, transform; /* Optimierung für bessere Performance */
+}
+
+.lazy-content.visible {
+    opacity: 1;
+}
+
+.lazy-content .slide-right {
+    transform: translateX(-100%);
+}
+
+.lazy-content .slide-up {
+    transform: translateY(100%);
+}
+
+.lazy-content.visible .slide-right {
+    animation: slideRight 2s ease-out forwards;
+}
+
+.lazy-content.visible .slide-up {
+    animation: slideUp 2s ease-out forwards;
+}
+
+/* Keyframes */
+@keyframes slideRight {
+    from { transform: translateX(-100%); }
+    to { transform: translateX(0); }
+}
+
+@keyframes slideUp {
+    from { transform: translateY(100%); }
+    to { transform: translateY(0); }
+}
+
+
+
+
+
+
+
+
+
+/*---------------------------------- Slide-Effekte ----------------------------------*/
+/* Gemeinsames Styling für alle Texte, die hereinfahren sollen */
+.slide-in {
+    /* font-size: 1.9em; /* Beispielhafte Schriftgröße, passe sie nach Bedarf an */
+    opacity: 1; /* Initiale Sichtbarkeit auf 0 setzen */
+    animation-fill-mode: forwards; /* Sicherstellen, dass die Animation bei 100% bleibt */
+    animation-delay: 3s; /* Verzögerung bevor die Animation startet, z.B. 0.5 Sekunden */
+    /* opacity: 1; /* Sichtbarkeit wieder auf 1 setzen */
+
+    font-family: 'Open Sans', sans-serif; /* Beibehaltung der aktuellen Schriftart */
+    font-size: 18px; /* Standard-Schriftgröße für den Fließtext */
+    color: #202020; /* Textfarbe */
+    margin-bottom: 20px; /* Abstand nach unten für jeden Absatz */
+}
+
+/* Definiere die Animation für das Hereinfahren von links */
+.a {
+    animation: slideInFromLeft 5s ease-in-out; /* Wende die Animation auf den Text an, Dauer: 3 Sekunden */
+    font-size: 20px; /* Setzt die Schriftgröße des Logos auf 24 Pixel */
+    margin-bottom: 18px; /* NEU: Füge einen Abstand unter dem Text hinzu */
+    font-style: italic; /* Macht den Text innerhalb eines Absatzes kursiv */
+    font-family: 'Open Sans', sans-serif;
+    /* color: #009c6c; /* Grüne Farbe passend zum Thema */
+    text-align: right; /* Zentrierter Text */
+}
+
+/* Definiere die Animation für das Hereinfahren von oben */
+.b {
+    animation: slideInFromTop 4s ease-in-out; /* Wende die Animation auf den Text an, Dauer: 3 Sekunden */
+    margin-bottom: 18px; /* Füge einen Abstand unter dem Text hinzu */
+    font-weight: bold; /* Macht den gesamten Text fett */
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px; /* Standard-Schriftgröße */
+    color: #555555; /* Etwas hellerer Grauton */
+    text-align: left; /* Linksbündiger Text */
+}
+
+.c {
+    animation: slideInFromBottom 3s ease-in-out; /* Wende die Animation auf den Text an, Dauer: 3 Sekunden */
+    margin-bottom: 18px; /* Füge einen Abstand unter dem Text hinzu */
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px; /* Standard-Schriftgröße */
+    color: #555555; /* Etwas hellerer Grauton */
+    text-align: left; /* Linksbündiger Text */
+}
+
+.d {
+    animation: slideInFromBottom 2s ease-in-out; /* Animation anwenden, Dauer: 3 Sekunden */
+    margin-bottom: 18px; /* Füge einen Abstand unter dem Text hinzu */
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px; /* Standard-Schriftgröße */
+    color: #555555; /* Etwas hellerer Grauton */
+    text-align: left; /* Linksbündiger Text */
+}
+
+.e {
+    animation: slideInFromLeft 3s ease-in-out; /* Animation anwenden, Dauer: 3 Sekunden */
+    margin-bottom: 18px; /* Füge einen Abstand unter dem Text hinzu */
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px; /* Standard-Schriftgröße */
+    color: #555555; /* Etwas hellerer Grauton */
+    text-align: left; /* Linksbündiger Text */
+}
+
+
+
+
+
+
+/* Animationen */
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-10%); /* Startposition des Texts: komplett links außerhalb des Viewports */
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0); /* Endposition des Texts: an der richtigen Position */
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromTop {
+    0% {
+        transform: translateY(-100%); /* Startposition des Texts: komplett oben außerhalb des Viewports */
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0); /* Endposition des Texts: an der richtigen Position */
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromRight {
+    0% {
+        transform: translateX(10%); /* Startposition des Texts: komplett rechts außerhalb des Viewports */
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0); /* Endposition des Texts: an der richtigen Position */
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromBottom {
+    0% {
+        transform: translateY(100%); /* Startposition: unterhalb des sichtbaren Bereichs */
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0); /* Endposition: an der richtigen Position */
+        opacity: 1;
+    }
+}
+
+
+
+/*---------------------------------- Ende Slide-Effekte ----------------------------------*/
+
+
+
+
+
+
+
+
+.read-more-btn {
+    display: inline-block;
+    padding: 5px 5px;
+    margin-top: 15px;
+    font-size: 14px;
+    background-color: #009c6c; /* Oder Ihre gewünschte Farbe */
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+    /*font-weight: bold;*/
+}
+
+.read-more-btn:hover {
+    background-color: #007c54; /* Dunklere Version der Farbe für Hover-Effekt */
+}
+
+.image-container {
+    display: block;
+    text-decoration: none;
+    overflow: hidden;
+}
+
+.image-container img {
+    transition: transform 0.3s ease;
+    border-radius: 7px;
+}
+
+.image-container:hover img {
+    /*transform: scale(1.05);*/
+}
+
+.slide-right {
+    text-align: right;
+}
+
+
+
+
+
+.divider {
+    width: 100%;
+    max-width: 1200px;
+    height: 1px;
+    background-color: #e0e0e0; /* Farbe der Trennlinie */
+    margin: 20px auto; /* Abstand nach oben und unten */
+}
+
+
+
+/* Stil für den Container mit Bild und Text */
+p {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;  /* Ersetzt margin-left und gibt den Abstand zwischen Bild und Text */
+}
+
+/* Stil für das Bild */
+p img {
+    flex: 0 0 auto;  /* Verhindert, dass das Bild schrumpft */
+}
