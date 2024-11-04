@@ -99,6 +99,12 @@ $searchQuery = isset($_GET['search']) ? trim($_GET['search']) : '';
         // Style für Navigation und Artikel-Liste
         echo '
         <style>
+            .blogbeitrag img {
+                max-width: 100%;
+                height: auto;
+                display: block;
+                margin: 20px auto;
+            }
             .back-link-container {
                 text-align: center;
                 margin: 20px 0;
@@ -214,6 +220,7 @@ $searchQuery = isset($_GET['search']) ? trim($_GET['search']) : '';
                     margin-bottom: 10px;
                 }
             }
+                
         </style>';
 
         // Suchformular
